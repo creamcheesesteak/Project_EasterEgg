@@ -4,7 +4,7 @@
 
  
 
-## :white_square_button:팀 이름 : Tajo
+## :white_square_button:팀 이름 : EasterEgg
 
 - 구성원
 
@@ -14,7 +14,10 @@
     - 원찬희 :link:(프론트엔드 개발 담당)
     - [최솔비](https://github.com/SolbiChoi) :link:(백엔드 개발 담당)
 
- 
+* 각오 : 데이터 분석을 통해서 사람들이 잘 알지 못했던 사실을 발견하거나 내용을 해석하고 의미를 부여해가나고자 함 
+  * cf) 이스터에그 : 개발자가 재미로 숨겨둔 메세지나 기능 등을 이름
+
+
 
 ## :white_square_button:일정
 
