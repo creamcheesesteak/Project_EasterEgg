@@ -6,12 +6,12 @@
 
 ## :white_square_button:팀 이름 : EasterEgg
 
-- 구성원
+- 구성
 
-  - 팀 매니저 : [임태혁](https://github.com/creamcheesesteak?tab=repositories) :link:(프로젝트 관리)
+  - 팀 매니저 : [임태혁](https://github.com/creamcheesesteak) :link:(프로젝트 관리)
   - 구성원
     - [서미오](https://github.com/mmeooo) :link:(웹 스크래핑, 전처리 담당)
-    - 원찬희 :link:(프론트엔드 개발 담당)
+    - [원찬희](https://github.com/Won9999) :link:(프론트엔드 개발 담당)
     - [최솔비](https://github.com/SolbiChoi) :link:(백엔드 개발 담당)
 
 * 각오 : 데이터 분석을 통해서 사람들이 잘 알지 못했던 사실을 발견하거나 내용을 해석하고 의미를 부여해가나고자 함 
