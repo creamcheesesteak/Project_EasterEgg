@@ -18,3 +18,9 @@ def home(request):
 
 def analysis(request):
     return render(request, 'analysis.html')
+
+def aid(request):
+    return render(request, 'index.html')
+
+def test(request):
+    return render(request, 'home_copy.html')
