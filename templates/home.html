@@ -11,6 +11,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+    /* 구글 웹 폰트 적용 */
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Roboto:wght@500&display=swap');
+    .jm-font{
+        font-family: 'Roboto', sans-serif; /* 웹 폰트 지정 */
+        color : black;
+    }
+
   body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -31,10 +38,15 @@
     margin-bottom: 30px;
   }
   .jumbotron {
-    background-color: #f4511e;
-    color: #fff;
+    background-color: #FFFFFF;
+    color: #000000;
     padding: 100px 25px;
-    font-family: Montserrat, sans-serif;
+    font-family: Roboto, sans-serif;
+    left:50%;
+  }
+  .input-group{
+    width: 40%;
+    margin: 0 auto;
   }
   .container-fluid {
     padding: 60px 50px;
@@ -120,17 +132,17 @@
   }
   .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: #212121;
     z-index: 9999;
     border: 0;
-    font-size: 12px !important;
+    font-size: 13px !important;
     line-height: 1.42857143 !important;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
   }
   .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    color: #BDBDBD !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
@@ -200,14 +212,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">EasterEgg</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#about">TEAM</a></li>
+        <li><a href="#services">SERVICE</a></li>
         <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#pricing">PRICING</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
@@ -215,13 +226,13 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <h1>Company</h1>
-  <p>We specialize in blablabla</p>
+  <h1>Service EasterEgg</h1>
+  <p class="jm-font">국가별 모바일 애플리케이션 이용현황 분석서비스</p>
   <form>
     <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <input type="nation" class="form-control" size="50" placeholder="국가 이름를 입력하세요" required>
       <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
+        <button style="background-color:#0277BD; border:none" type="button" class="btn btn-danger" onclick="location='/analysis'">Search</button>
       </div>
     </div>
   </form>
@@ -357,73 +368,6 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
-</div>
-
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
-  <div class="text-center">
-    <h2>Pricing</h2>
-    <h4>Choose a payment plan that works for you</h4>
-  </div>
-  <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Basic</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 

@@ -15,3 +15,6 @@ def index(request):
 def home(request):
     result = {'first':'Multi_A3', 'second':'TEAM EasterEgg'}
     return render(request, 'home.html', context=result)
+
+def analysis(request):
+    return render(request, 'analysis.html')
