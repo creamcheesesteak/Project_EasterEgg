@@ -18,9 +18,58 @@
   - 구성원
     - [서미오](https://github.com/mmeooo) :link:(웹 스크래핑, 전처리)
     - [최솔비](https://github.com/SolbiChoi) :link:(웹 구현 백엔드)
+    - [김정휴](https://github.com/aidsfintech) :link:(DB)
 
 * 각오 : 데이터 분석을 통해서 사람들이 잘 알지 못했던 사실을 발견하거나 내용을 해석하고 의미를 부여해가나고자 함 
   * cf) 이스터에그 : 개발자가 재미로 숨겨둔 메세지나 기능 등을 이름
+
+## :white_square_button:프로젝트 수행 방법/도구
+
+데이터 수집, 환경구축(Django)
+
+①스크래핑 : https://www.appannie.com/ , https://sensortower.com/
+
+②데이터셋 : https://www.kaggle.com/lava18/google-play-store-apps
+
+ 
+
+① 스크래핑
+
+데이터수집과 전처리
+
+- BeautifulSoup: 정적 HTML문서 파싱     /원하는 데이터 추출. parser, select
+- Requests: HTML 소스 다운로드. get     content, status_code
+- Pandas : 데이터프레임 생성
+- Numpy
+
+데이터 분석 : 상관관계 분석
+
+- Pandas
+- SQLites
+
+시각화
+
+- Matplotlib:     그래프
+
+- Seaborn: heatmap(상관관계)
+
+② 데이터셋
+
+- pandas → 캐글 데이터 `read_csv`로 로드
+
+- info(), describe(),     value_counts() 로 연속형, 분류형 변수 구분
+
+  → 분류형은 one-hot encoding(get_dummies)
+
+- 종속변수, 독립변수 결정
+
+- seaborn → heatmap으로 변수 간 상관관계     분석
+
+- Sklearn → preprocessing으로 데이터     표준화
+
+- Sklearn →     train_test_split히여 데이터 나눔. shape으로     확인
+
+- sklearn → xgboost: predict해     예측값 도출
 
 
 
