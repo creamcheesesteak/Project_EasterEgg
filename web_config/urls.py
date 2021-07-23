@@ -25,4 +25,8 @@ urlpatterns = [
     path('analysis', views.analysis),
     path('aid', views.aid),
     path('test', views.test),
+
+    path('free', views.free),
+    path('paid', views.paid),
+    path('ml', views.ml),
 ]

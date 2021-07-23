@@ -24,3 +24,12 @@ def aid(request):
 
 def test(request):
     return render(request, 'home_copy.html')
+
+def free(request):
+    return render(request, 'free.html')
+
+def paid(request):
+    return render(request, 'paid.html')
+
+def ml(request):
+    return render(request, 'ml.html')
