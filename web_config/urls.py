@@ -29,4 +29,6 @@ urlpatterns = [
     path('free', views.free),
     path('paid', views.paid),
     path('ml', views.ml),
+
+    path('sample', views.sample),
 ]
