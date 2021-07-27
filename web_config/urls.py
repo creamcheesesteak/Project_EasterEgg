@@ -20,15 +20,17 @@ from home import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index', views.index),
+
     path('', views.home),
     path('home', views.home),
+    path('info', views.info),
     path('analysis', views.analysis),
-    path('aid', views.aid),
-    path('test', views.test),
+
 
     path('free', views.free),
     path('paid', views.paid),
     path('ml', views.ml),
 
     path('sample', views.sample),
+    path('aid', views.aid),
 ]
