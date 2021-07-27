@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <title>EASTER EGG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,span {font-family: 'Holtwood One SC', serif;}
+        h4,h5,h6,p,a,div,select,button  {font-family: 'Montserrat', sans-serif;}
+
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+          color: #eba13d;
+          background-color: #235c47;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-size: cover;
+          background-image: url("static/images/castle.jpg");
+          min-height: 100%;
+        }
+        .w3-bar .w3-button { padding: 16px; }
+
+
+
+
+
+    </style>
+
+    <body>
+      <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/home" class="w3-bar-item w3-button w3-wide">EASTER EGG</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="/home" class="w3-bar-item w3-button">HOME</a>
+          <a href="#service" class="w3-bar-item w3-button"><i class="fa fa-pencil"></i> SERVICE</a>
+          <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+          <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+          <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+      <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+      <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+
+    <!-- Service Section -->
+    <div class="w3-container" style="padding:150px 20px" id="service">
+      <h2 class="w3-center">ABOUT SERVICES</h2>
+      <h4 class="w3-center w3-large">What we offer</h4>
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-half">
+          <a href="/free" style="text-decoration:none">
+            <i class="fa fa-heart w3-margin-bottom w3-jumbo w3-center"></i>
+            <h3 class="w3-large">FREE</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          </a>
+        </div>
+        <div class="w3-half">
+          <a href="/paid" style="text-decoration:none">
+            <i class="fa fa-dollar w3-margin-bottom w3-jumbo"></i>
+            <h3 class="w3-large">PAID</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Section -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="work">
+          <h2 class="w3-center">Our Work</h2>
+          <h4 class="w3-center w3-large">What we have created.</h4>
+          <div class="w3-row-padding w3-center" style="margin-top:64px">
+            <div class="w3-half">
+              <a href="/ml" style="text-decoration:none">
+                <i class="fa fa-line-chart w3-margin-bottom w3-jumbo"></i>
+                <h3 class="w3-large">Machine Learning</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </a>
+            </div>
+            <div class="w3-half">
+              <a href="/ml" style="text-decoration:none">
+                <i class="fa fa-search w3-margin-bottom w3-jumbo"></i>
+                <h3 class="w3-large">Naver Stock Scraping</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+              </a>
+            </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="w3-container" style="padding:128px 16px" id="team">
+      <h3 class="w3-center">THE TEAM</h3>
+      <p class="w3-center w3-large">The ones who runs this project</p>
+      <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+            <div class="w3-container">
+              <h3>TaeHyuk Lim</h3>
+              <p class="w3-opacity">TEAM LEADER</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/creamcheesesteak'"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+            <div class="w3-container">
+              <h3>Mio SEO</h3>
+              <p class="w3-opacity">TEAM MEMBER</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/mmeooo'"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+            <div class="w3-container">
+              <h3>Solbi Choi</h3>
+              <p class="w3-opacity">TEAM MEMBER</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/SolbiChoi'"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+            <div class="w3-container">
+              <h3>JungHue Kim</h3>
+              <p class="w3-opacity">TEAM MEMBER</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/aidsfintech'"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+   <!-- Contact Section -->
+    <div class="w3-container w3-grey" style="padding:128px 16px" id="contact">
+      <h3 class="w3-center">CONTACT</h3>
+      <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+      <div style="margin-top:48px">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Seoul, Korea</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+        <br>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+          <p>
+            <button class="w3-button w3-black" type="submit">
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-32">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    </footer>
+
+   <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+    </script>
+
+    </body>
+</html>
