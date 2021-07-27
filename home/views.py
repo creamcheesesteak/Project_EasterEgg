@@ -21,7 +21,11 @@ def info(request):
     return render(request, 'info.html')
 
 def analysis(request):
-    return render(request, 'analysis.html')
+    nation = request.GET.get('nation')
+    context = {
+        'nation':nation
+    }
+    return render(request, 'analysis.html', context)
 
 
 
@@ -40,3 +44,8 @@ def aid(request):
 
 def sample(request):
     return render(request, 'sample.html')
+
+# def value(request):
+#     nation = request.get('nation')
+#     print(nation)
+#     return render(request, 'analysis.html',contenxt=nation)
