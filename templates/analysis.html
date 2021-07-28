@@ -7,6 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&Jua&family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 <style>
 
   html,body, h1, h2, h3 {font-family: 'Montserrat', sans-serif; }
@@ -107,7 +110,21 @@
       <h1 class="w3-text-teal">Heading</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
         dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+      <div id="if_Plot" style="width:100%;max-width:700px"></div>
+      <script>
+var xArray = {{ x_group_f | safe }};
+var yArray = {{ y_value_if | safe }};
+
+var layout = {title: "{{ nation }} apple store(free)"};
+
+var data = [{labels:xArray, values:yArray, type:"pie"}];
+
+Plotly.newPlot("if_Plot", data, layout);
+</script>
     </div>
+
+
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
       <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
@@ -119,7 +136,21 @@
       <h1 class="w3-text-teal">Heading</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
         dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+      <div id="gpf_Plot" style="width:100%;max-width:700px"></div>
+      <script>
+var xArray = {{ x_group_f | safe }};
+var yArray = {{ y_value | safe }};
+
+var layout = {title: "{{ nation }} google play store(free)"};
+
+var data = [{labels:xArray, values:yArray, type:"pie"}];
+
+Plotly.newPlot("gpf_Plot", data, layout);
+</script>
     </div>
+
+
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
       <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
