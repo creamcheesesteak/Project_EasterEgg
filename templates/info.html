@@ -10,18 +10,19 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <style>
         body,h1,h2,h3,span {font-family: 'Holtwood One SC', serif;}
-        p,a,div {font-family: 'Montserrat', sans-serif; font-size:1.3vw;}
-
-        h1{ font-size:3vw; }
-        h2{ font-size:2.3vw; }
-        h3{ font-size:1.7vw; }
+        h4,div {font-family: 'Montserrat', sans-serif; font-size:1.3vw;}
+        p {font-family: 'Jua', sans-serif; font-size:1.4vw;}
+        h1 {font-size:3vw; }
+        h2 {font-size:2.4vw; }
+        h3 {font-size:1.8vw; }
+        h4 {font-size:1.4vw; }
 
         body, html {
           height: 100%;
@@ -82,18 +83,18 @@
         <!-- FREE Service Section -->
         <div class="w3-half">
           <i class="fa fa-heart w3-margin-bottom w3-jumbo" onclick="document.getElementById('modal01').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
-          <h2>FREE</h2>
-          <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <h2>FREE APP</h2>
+          <h4>Analysis service for free mobile application data</h4>
             <!-- FREE Service Modal -->
             <div id="modal01" class="w3-modal" onclick="this.style.display='none'" >
              <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black" style="min-inline-size:max-content;">
                 <header class="w3-container w3-grey w3-text-black">
                   <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                  <h3>FREE ANALYSIS</h3>
+                  <h3>FREE APP</h3>
                 </header>
                  <div class="w3-container">
-                     <p>You have two options to close this modal:</p>
-                     <p>Click on the "x" or click anywhere outside of the modal!</p>
+                     <p>무료 모바일 애플리케이션 데이터에 대한 분석 서비스</p>
+                     <p>국가별 이용자들의 이용어플 비중의 분포와 선호를 파악</p>
                      <p>설</p>
                      <p>명</p>
                      <p>하</p>
@@ -105,14 +106,14 @@
         <!-- PAID Service Section -->
         <div class="w3-half">
             <i class="fa fa-dollar w3-margin-bottom w3-jumbo" onclick="document.getElementById('modal02').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
-            <h2>PAID</h2>
-            <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            <h2>PAID APP</h2>
+            <h4>Analysis service for paid mobile application data</h4>
             <!-- PAID Service Modal -->
              <div id="modal02" class="w3-modal" onclick="this.style.display='none'" >
                  <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black" style="min-inline-size:max-content;">
                     <header class="w3-container w3-grey w3-text-black">
                       <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                      <h3>PAID ANALYSIS</h3>
+                      <h3>PAID APP</h3>
                     </header>
                      <div class="w3-container">
                          <p>You have two options to close this modal:</p>
@@ -132,20 +133,20 @@
     <!-- Work Section -->
     <div class="w3-container w3-light-grey w3-large" style="padding:10vw 8vw;" id="work">
           <h1 class="w3-center">Our Work</h1>
-          <h3 class="w3-center">What we have created.</h3>
+          <h3 class="w3-center">What we have created</h3>
           <div class="w3-row-padding w3-center" style="margin-top:80px">
             <div class="w3-half">
               <a href="/analysis" style="text-decoration:none">
                 <i class="fa fa-line-chart w3-margin-bottom w3-jumbo"></i>
                 <h2>Machine Learning</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                <h4>Identify the factors that affect app rating and analyze the correlation between factors.</h4>
               </a>
             </div>
             <div class="w3-half">
               <a href="/analysis" style="text-decoration:none">
                 <i class="fa fa-search w3-margin-bottom w3-jumbo"></i>
                 <h2>Naver Stock Scraping</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                <h4>Collect all text data written on webpages using Python and BeautifulSoup</h4>
               </a>
             </div>
       </div>
@@ -162,9 +163,9 @@
 <!--            <img src="/w3images/team2.jpg" alt="John" style="width:100%">-->
             <div class="w3-container">
               <h3>TaeHyuk Lim</h3>
-              <p class="w3-opacity">TEAM LEADER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/creamcheesesteak'"><i class="fa fa-envelope"></i> Contact</button></p>
+                <p class="w3-opacity">TEAM LEADER</p>
+                <p>Project Management</p><p>Data Preprocessing</p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/creamcheesesteak'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
@@ -173,8 +174,8 @@
             <div class="w3-container">
               <h3>Mio SEO</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/mmeooo'"><i class="fa fa-envelope"></i> Contact</button></p>
+              <p>Web Design</p><p>Data Scraping </p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/mmeooo'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
@@ -183,8 +184,8 @@
             <div class="w3-container">
               <h3>Solbi Choi</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/SolbiChoi'"><i class="fa fa-envelope"></i> Contact</button></p>
+              <p>Data Visualization</p><p>Machine Learning</p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/SolbiChoi'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
@@ -193,8 +194,8 @@
             <div class="w3-container">
               <h3>JungHue Kim</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/aidsfintech'"><i class="fa fa-envelope"></i> Contact</button></p>
+              <p>Database Design</p><p>Machine Learning</p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/aidsfintech'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
