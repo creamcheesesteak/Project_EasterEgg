@@ -10,19 +10,22 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&Jua&family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <style>
-        body,h1,h2,h3,span {font-family: 'Holtwood One SC', serif;}
-        h4,div {font-family: 'Montserrat', sans-serif; font-size:1.3vw;}
-        p {font-family: 'Jua', sans-serif; font-size:1.4vw;}
-        h1 {font-size:3vw; }
-        h2 {font-size:2.4vw; }
-        h3 {font-size:1.8vw; }
-        h4 {font-size:1.4vw; }
+        body, h1, h2, span {font-family: 'Holtwood One SC', serif;}
+        h3 {font-family: 'Montserrat', sans-serif; }
+        p,h4 {font-family: 'Gowun Dodum', sans-serif; font-size:1.6vw;}
+
+        h1 {font-size:3.2vw;}
+        h2 {font-size:2.7vw;}
+        h3 {font-size:2.3vw;}
+        h4 {font-size:2vw;}
+        p {font-size:1.8vw;}
+
 
 
         body, html {
@@ -47,9 +50,9 @@
 
 
     <body>
-      <!-- Navbar (sit on top) -->
+    <!-- Navbar -->
     <div class="w3-top">
-      <div class="w3-bar w3-white w3-card" id="myNavbar" style="padding:0.3vw; font-size:1.3vw;">
+      <div class="w3-bar w3-white w3-card" id="myNavbar" style="padding:0.3vw; font-size:1.3vw; font-family:'Montserrat',sans-serif;">
         <a href="/home" class="w3-bar-item w3-button w3-wide">EASTER EGG</a>
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small" style="font-size:1.3vw;">
@@ -65,8 +68,8 @@
         </a>
       </div>
     </div>
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-right" style="width:200px;right:0;color:black;" id="mySidebar">
+    <!-- Sidebar on small screens -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-right w3-padding-16"  style="display:none; width:20vw;right:0; color:black;font-size:medium;" id="mySidebar">
       <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-12">Close &times;</a>
       <a href="/home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
       <a href="#service" onclick="w3_close()" class="w3-bar-item w3-button">SERVICE</a>
@@ -76,78 +79,80 @@
     </nav>
 
 
-
     <!-- Service Section -->
     <div class="w3-container w3-large" style="padding:14vw 8vw;" id="service">
       <h1 class="w3-center">ABOUT SERVICES</h1>
       <h3 class="w3-center">What we offer</h3>
       <div class="w3-row-padding w3-center" style="margin-top:12vw">
-        <!-- FREE Service Section -->
+        <!-- FREE APP Section -->
         <div class="w3-half">
-          <i class="fa fa-heart w3-margin-bottom w3-jumbo" onclick="document.getElementById('modal01').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
+            <!-- Trigger the modal with a icon -->
+          <i class="fa fa-heart w3-jumbo" onclick="document.getElementById('id01').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
           <h2>FREE APP</h2>
           <h4>Analysis service for free mobile application data</h4>
-            <!-- FREE Service Modal -->
-            <div id="modal01" class="w3-modal" onclick="this.style.display='none'" >
-             <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black" style="min-inline-size:max-content;">
+            <!-- FREE APP Modal -->
+            <div id="id01" class="w3-modal">
+             <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black">
                 <header class="w3-container w3-grey w3-text-black">
-                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                  <h3>FREE APP</h3>
-                </header>
-                 <div class="w3-container">
-                     <p>무료 모바일 애플리케이션 데이터에 대한 분석 서비스</p>
-                     <p>EasterEgg는 모바일 애플리케이션의 데이터를 취합하여 이용자들로 하여금 특정 국가를 선택하면 관련 국가의 App Store와 Google Play Store의 100위 순위에 리스트된 국가의 데이터를 불러와 시각화(통계치) 분석자료를 제공하는 서비스를 제공하고 있습니다</p>
-                     <p>본 페이지는 무료 애플리케이션 시장분석 서비스에 대한 내용을 설명하는 페이지입니다</p>
-                     <p>애플리케이션 시장은 크게 무료앱과 유료앱으로 나뉘어지며, 이는 애플과 구글이 분류하는 정책에 따라 결정됩니다</p>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn w3-padding-top" style="float: right;">&times;</span>
+                    <h2>FREE APP</h2></header>
+                 <div class="w3-container" style="text-align:center; max-width:fit-content;">
+                     <h4><b>무료 모바일 애플리케이션 데이터에 대한 분석 서비스</b></h4>
+                     <p>EasterEgg는 모바일 애플리케이션의 데이터를 취합하여 이용자들로 하여금 특정 국가를 선택하면 관련 국가의 App Store와 Google Play Store의 100위 순위에 리스트된 국가의 데이터를 불러와 시각화(통계치) 분석자료를 제공하는 서비스를 제공하고 있습니다.</p>
+                     <p>본 페이지는 무료 애플리케이션 시장분석 서비스에 대한 내용을 설명하는 페이지입니다. 애플리케이션 시장은 크게 무료앱과 유료앱으로 나뉘어지며, 이는 애플과 구글이 분류하는 정책에 따라 결정됩니다</p>
                      <p>우리는 본 서비스를 통해 예비 개발자들이 사전 시장조사시 시장파악과 관련정보 획득에 도움을 줄 뿐만 아니라 마케팅, 연구자 등 앱 시장 파악에 기여하기를 기대합니다</p>
                      <p>카테고리는 Games, Applications, Kids의 대분류를 가지며, 무료 앱 페이지는 Games, Kids의 비중이 적기 때문에 Applications에 대해 분석합니다</p>
                      <p>Applications는 [Life, Leisure, Work, Edu]의 중분류를 가지며 중분류의 소 카테고리 분류는아래와 같습니다 </p>
-                     <p>Life : 'Food and Drink (Applications)', 'Health and Fitness (Applications)','Lifestyle (Applications)', 'Weather (Applications)', 'Medical (Applications)', 'Navigation (Applications)','Finance (Applications)'
-
-Leisure : 'Entertainment (Applications)', 'Shopping (Applications)', 'Social Networking (Applications)', 'Sports (Applications)', 'Travel (Applications)', 'Music (Applications)', 'Photo and Video (Applications)'
-
-Work : ['Business (Applications)', 'Developer Tools (Applications)', 'Graphics & Design (Applications)', 'Productivity (Applications)'
-
-Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Applications)', 'Reference (Applications)',' Magazines and Newspapers (Applications)', 'News (Applications)', 'Utilities (Applications)'</p>
+                     <p>1. Life : 'Food and Drink (Applications)', 'Health and Fitness (Applications)','Lifestyle (Applications)', 'Weather (Applications)', 'Medical (Applications)', 'Navigation (Applications)','Finance (Applications)'</p>
+                     <p>2. Leisure : 'Entertainment (Applications)', 'Shopping (Applications)', 'Social Networking (Applications)', 'Sports (Applications)', 'Travel (Applications)', 'Music (Applications)', 'Photo and Video (Applications)'</p>
+                     <p>3. Work : ['Business (Applications)', 'Developer Tools (Applications)', 'Graphics & Design (Applications)', 'Productivity (Applications)'</p>
+                     <p>4. Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Applications)', 'Reference (Applications)',' Magazines and Newspapers (Applications)', 'News (Applications)', 'Utilities (Applications)'</p>
                      <p>무료 앱 분석 서비스는 위의 카테고리를 기준으로 애플과 구글에 따라 각 시장개요에 대한 중분류에 따른 overview를 제공하며, 내용은 아래와 같습니다</p>
-                     <img src="./static/images/free_overview.png">
-                     <p>다음, 소분류의 비중을 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다</p>
-                     <p>다음, 활용한 raw data를 게재하여 이용자가 손쉽게 접근하여 가공, 수정할 수 있도록하였습니다</p>
+                     <img src="./static/images/free_overview.png" style="width:60vw; height:25vw;">
+                     <p>다음, 소분류의 비중을 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다. 다음, 활용한 raw data를 게재하여 이용자가 손쉽게 접근하여 가공, 수정할 수 있도록하였습니다</p>
+                 </div>
+                 <div class="w3-container w3-grey w3-padding">
+                     <button class="w3-btn w3-right w3-light-grey w3-border" onclick="document.getElementById('id01').style.display='none'" style="font-size: small;">Close</button>
                  </div>
              </div>
            </div>
         </div>
-        <!-- PAID Service Section -->
-        <div class="w3-half">
-            <i class="fa fa-dollar w3-margin-bottom w3-jumbo" onclick="document.getElementById('modal02').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
-            <h2>PAID APP</h2>
-            <h4>Analysis service for paid mobile application data</h4>
-            <!-- PAID Service Modal -->
-             <div id="modal02" class="w3-modal" onclick="this.style.display='none'" >
-                 <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black" style="min-inline-size:max-content;">
+            <!-- PAID APP Section -->
+            <div class="w3-half">
+                <!-- Trigger the modal with a icon -->
+                <i class="fa fa-dollar w3-margin-bottom w3-jumbo" onclick="document.getElementById('id02').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
+                <h2>PAID APP</h2>
+                <h4>Analysis service for paid mobile application data</h4>
+                <!-- PAID APP Modal -->
+                 <div id="id02" class="w3-modal">
+                 <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black">
                     <header class="w3-container w3-grey w3-text-black">
-                      <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                      <h3>PAID APP</h3>
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-closebtn w3-padding-top" style="float: right;">&times;</span>
+                        <h2>PAID APP</h2>
                     </header>
-                     <div class="w3-container">
-                         <p>유료 모바일 애플리케이션 데이터에 대한 분석 서비스</p>
-                         <p>EasterEgg는 모바일 애플리케이션의 데이터를 취합하여 이용자들로 하여금 특정 국가를 선택하면 관련 국가의 App Store와 Google Play Store의 100위 순위에 리스트된 국가의 데이터를 불러와 시각화(통계치) 분석자료를 제공하는 서비스를 제공하고 있습니다</p>
-                         <p>본 페이지는 유료 애플리케이션 시장분석 서비스에 대한 내용을 설명하는 페이지입니다</p>
-                         <p>애플리케이션 시장은 크게 무료앱과 유료앱으로 나뉘어지며, 이는 애플과 구글이 분류하는 정책에 따라 결정됩니다</p>
-                         <p>우리는 본 서비스를 통해 예비 개발자들이 사전 시장조사시 시장파악과 관련정보 획득에 도움을 줄 뿐만 아니라 마케팅, 연구자 등 앱 시장 파악에 기여하기를 기대합니다</p>
-                         <p>카테고리는 Games, Applications, Kids의 대분류를 가지며, 우리는 유료 앱 순위에 랭크된 앱들의 대부분은 Games임을 확인할 수 있었습니다</p>
-                         <p>따라서, 본 프로젝트에서는 유료앱의 타 카테고리 간 비교분석이 유의미하지 않을 것이라고 판단되어 유료 앱 중 '게임' 카테고리에 한정하여 게임 장르(롤플레잉, 아케이드, etc)의 선호도 비중을 시각화하여 분포와 선호도를 파악합니다</p>
-                         <p>Games에 대한 소 카테고리 분류는 아래와 같습니다</p>
-                         <p>Games : ‘Action (Games)’, ‘Adventure (Games)’, ‘Board (Games)’, ‘Card (Games)’, ‘Casino (Games)’, ‘Casual (Games)’, ‘Dice (Games)’, ‘Education (Games)’, ‘Family (Games)’, ‘Kids (Games)’, ‘Music (Games)’, ‘Puzzle (Games)’, ‘Racing (Games)’, ‘Role (Games)’ ‘Playing (Games)’, ‘Simulation (Games)’, ‘Sports (Games)’, ‘Strategy (Games)’, ‘Trivia (Games)’, ‘Word (Games)’</p>
-                         <p>본 서비스는 Games의 소 카테고리 분류에 따라 비중이 얼마나 차지하고 있는지 이용자가 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다</p>
-                         <img src="./static/images/paid_detailview.png">
-                         <p>다음, 활용한 raw data를 게재하여 이용자가 손쉽게 접근하여 가공, 수정할 수 있도록하였습니다</p>
-                     </div>
+                        <!-- Modal content-->
+                        <div class="w3-container w3-animate-zoom" style="text-align:center; max-width:fit-content;">
+                            <h4><b>유료 모바일 애플리케이션 데이터에 대한 분석 서비스</b></h4>
+                            <p>EasterEgg는 모바일 애플리케이션의 데이터를 취합하여 이용자들로 하여금 특정 국가를 선택하면 관련 국가의 App Store와 Google Play Store의 100위 순위에 리스트된 국가의 데이터를 불러와 시각화(통계치) 분석자료를 제공하는 서비스를 제공하고 있습니다</p>
+                            <p>본 페이지는 유료 애플리케이션 시장분석 서비스에 대한 내용을 설명하는 페이지입니다</p>
+                            <p>애플리케이션 시장은 크게 무료앱과 유료앱으로 나뉘어지며, 이는 애플과 구글이 분류하는 정책에 따라 결정됩니다</p>
+                            <p>우리는 본 서비스를 통해 예비 개발자들이 사전 시장조사시 시장파악과 관련정보 획득에 도움을 줄 뿐만 아니라 마케팅, 연구자 등 앱 시장 파악에 기여하기를 기대합니다</p>
+                            <p>카테고리는 Games, Applications, Kids의 대분류를 가지며, 우리는 유료 앱 순위에 랭크된 앱들의 대부분은 Games임을 확인할 수 있었습니다</p>
+                            <p>따라서, 본 프로젝트에서는 유료앱의 타 카테고리 간 비교분석이 유의미하지 않을 것이라고 판단되어 유료 앱 중 '게임' 카테고리에 한정하여 게임 장르(롤플레잉, 아케이드, etc)의 선호도 비중을 시각화하여 분포와 선호도를 파악합니다</p>
+                            <p>Games에 대한 소 카테고리 분류는 아래와 같습니다</p>
+                            <p>Games : ‘Action (Games)’, ‘Adventure (Games)’, ‘Board (Games)’, ‘Card (Games)’, ‘Casino (Games)’, ‘Casual (Games)’, ‘Dice (Games)’, ‘Education (Games)’, ‘Family (Games)’, ‘Kids (Games)’, ‘Music (Games)’, ‘Puzzle (Games)’, ‘Racing (Games)’, ‘Role (Games)’ ‘Playing (Games)’, ‘Simulation (Games)’, ‘Sports (Games)’, ‘Strategy (Games)’, ‘Trivia (Games)’, ‘Word (Games)’</p>
+                            <p>본 서비스는 Games의 소 카테고리 분류에 따라 비중이 얼마나 차지하고 있는지 이용자가 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다</p>
+                            <img src="./static/images/paid_detailview.png" style="width:60vw; height:25vw;">
+                            <p>다음, 활용한 raw data를 게재하여 이용자가 손쉽게 접근하여 가공, 수정할 수 있도록하였습니다</p>
+                        </div>
+                        <div class="w3-container w3-grey w3-padding">
+                             <button class="w3-btn w3-right w3-light-grey w3-border" onclick="document.getElementById('id02').style.display='none'" style="font-size: small;">Close</button>
+                        </div>
+                    </div>
                  </div>
              </div>
-        </div>
+         </div>
       </div>
-    </div>
 
 
     <!-- Work Section -->
@@ -155,6 +160,7 @@ Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Application
           <h1 class="w3-center">Our Work</h1>
           <h3 class="w3-center">What we have created</h3>
           <div class="w3-row-padding w3-center" style="margin-top:12vw">
+            <!-- Machine Learning -->
             <div class="w3-half">
               <a href="/analysis" style="text-decoration:none">
                 <i class="fa fa-line-chart w3-margin-bottom w3-jumbo"></i>
@@ -162,16 +168,32 @@ Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Application
                 <h4>Identify the factors that affect app rating and analyze the correlation between factors.</h4>
               </a>
             </div>
+            <!-- Naver Stock Scraping -->
             <div class="w3-half">
-              <a href="/analysis" style="text-decoration:none">
-                <i class="fa fa-search w3-margin-bottom w3-jumbo"></i>
+                <!-- Trigger the modal with a icon -->
+                <i class="fa fa-search w3-margin-bottom w3-jumbo" onclick="document.getElementById('id03').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
                 <h2>Naver Stock Scraping</h2>
                 <h4>Collect all text data written on webpages using Python and BeautifulSoup</h4>
-              </a>
+                <!-- Naver Stock Scraping Modal -->
+                <div id="id03" class="w3-modal">
+                    <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black">
+                    <header class="w3-container w3-grey w3-text-black">
+                        <span onclick="document.getElementById('id03').style.display='none'" class="w3-closebtn w3-padding-top" style="float: right;">&times;</span>
+                        <h2>Naver Stock Scraping</h2>
+                    </header>
+                        <!-- Modal content-->
+                        <div class="w3-container w3-animate-zoom" style="text-align:center; max-width:fit-content;">
+                            <h4><b>네이버 시가총액 순위 데이터 스크래핑</b></h4>
+                            <p>Python, BeautifulSoup 라이브러리를 사용하여 여러 페이지에 작성된 모든 텍스트 데이터를 수집했다.</p>
+                        </div>
+                        <div class="w3-container w3-grey w3-padding">
+                             <button class="w3-btn w3-right w3-light-grey w3-border" onclick="document.getElementById('id03').style.display='none'" style="font-size: small;">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-      </div>
+          </div>
     </div>
-
 
     <!-- Team Section -->
     <div class="w3-container w3-large" style="padding:12vw 8vw;" id="team">
@@ -180,9 +202,8 @@ Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Application
       <div class="w3-row-padding w3-grayscale" style="margin-top:14vw">
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-<!--            <img src="/w3images/team2.jpg" alt="John" style="width:100%">-->
             <div class="w3-container w3-center">
-              <h3>TaeHyuk Lim</h3>
+              <h3>TaeHyeok Im</h3>
                 <p class="w3-opacity">TEAM LEADER</p>
                 <p>Project Management</p><p>Data Preprocessing</p>
               <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/creamcheesesteak'"><i class="fa fa-envelope"></i> Contact</button></h4>
@@ -192,7 +213,7 @@ Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Application
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
             <div class="w3-container w3-center">
-              <h3>Mio SEO</h3>
+              <h3>Mio Seo</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
               <p>Web Design</p><p>Data Scraping </p>
               <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/mmeooo'"><i class="fa fa-envelope"></i> Contact</button></h4>
@@ -212,7 +233,7 @@ Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Application
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
             <div class="w3-container w3-center">
-              <h3>JungHue Kim</h3>
+              <h3>JeongHue Kim</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
               <p>Database Design</p><p>Machine Learning</p>
               <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/aidsfintech'"><i class="fa fa-envelope"></i> Contact</button></h4>
@@ -253,37 +274,31 @@ Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Application
 
 
    <script>
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("modal01").style.display = "block";
-      document.getElementById("modal02").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
 
    // Get the modal
     var modal = document.getElementById('id01');
     var modal = document.getElementById('id02');
+    var modal = document.getElementById('id03');
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) { modal.style.display = "none"; }
-    }
+        if (event.target == modal) {modal.style.display = "none";} }
 
-    // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar");
+
 
     function w3_open() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-      } else {
-        mySidebar.style.display = 'block';
+      if (mySidebar.style.display == 'block') {
+        mySidebar.style.display = 'none'; }
+      else {
+        mySidebar.style.display = 'block'; }
       }
-    }
+
+     // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
 
     // Close the sidebar with the close button
     function w3_close() {
-        mySidebar.style.display = "none";
+        mySidebar.style.display = 'none';
     }
 
 
