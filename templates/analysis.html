@@ -20,8 +20,7 @@
   h2 {font-size:2.7vw;}
   h3 {font-size:2.3vw;}
   h4 {font-size:2vw;}
-  p {font-size:1.8vw;}
-
+  p, select, button {font-size:1.8vw;}
 
 
 </style>
@@ -34,19 +33,38 @@
 </div>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:max-content;" id="mySidebar"><br>
-  <br><span style="padding:1vw 2vw;font-size:2vw;"> Welcome to  <strong>EASTER EGG</strong></span><hr>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-medium" style="z-index:3;width:max-content;" id="mySidebar"><br>
   <div class="w3-container">
-    <h5><b>{{ nation }}</b></h5>
+    <h2><i class="fa fa-globe"></i><b>  {{ nation }}</b></h2>
+    <form name="search" action="/analysis" method="GET">
+        <div class="w3-input-group w3-hover-opacity-off " style="display:inline-flex; flex-direction: row;">
+            <select name="nation">
+                <option value="" disabled selected hidden>Choose Country</option>
+                <option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Belgium">Belgium</option><option value="Brazil">Brazil</option>
+                <option value="Chile">Chile</option><option value="Croatia">Croatia</option><option value="Czech_Republic">Czech_Republic</option><option value="Finland">Finland</option>
+                <option value="France">France</option><option value="Germany">Germany</option><option value="Egypt">Egypt</option><option value="Greece">Greece</option>
+                <option value="Hong_Kong">Hong_Kong</option><option value="Hungary">Hungary</option><option value="India">India</option><option value="Indonesia">Indonesia</option>
+                <option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option>
+                <option value="Japan">Japan</option><option value="Malaysia">Malaysia</option><option value="Mexico">Mexico</option><option value="Netherlands">Netherlands</option>
+                <option value="New_Zealand">New_Zealand</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option>
+                <option value="Russia">Russia</option><option value="South_Korea">South_Korea</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option><option value="Taiwan">Taiwan</option><option value="Thailand">Thailand</option><option value="Turkey">Turkey</option>
+                <option value="Ukraine">Ukraine</option><option value="United_Kingdom">United_Kingdom</option><option value="Uruguay">Uruguay</option><option value="Vietnam">Vietnam</option>
+            </select>
+          <button class="w3-button w3-white w3-border w3-border-black w3-hover-teal" onclick="location='/analysis'">Search</button>
+        </div>
+      </form>
   </div>
-
-  <div class="w3-bar-block" style="font-size:2vw!important;">
-    <a href="#" class="w3-bar-item w3-button w3-padding-12 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close</a>
+  <hr>
+  <div class="w3-bar-block" >
+    <a href="#" class="w3-bar-item w3-button w3-hide-large w3-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close</a>
+    <a href="/" class="w3-bar-item w3-button"><i class="fa fa-mail-reply fa-fw"></i>  HOME</a>
+    <a href="/info" class="w3-bar-item w3-button"><i class="fa fa-smile-o fa-fw"></i>  INFO</a>
+    <hr>
     <a href="#overview" class="w3-bar-item w3-button"><i class="fa fa-users fa-fw"></i>  Overview</a>
     <a href="#freeapp" class="w3-bar-item w3-button"><i class="fa fa-heart fa-fw"></i>  Free App</a>
-    <a href="#paidapp" class="w3-bar-item w3-button w3-padding"><i class="fa fa-dollar fa-fw"></i>  Paid App</a>
-    <a href="#rawdata" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-bar-chart fa-fw"></i>  Raw Data</a>
-
+    <a href="#paidapp" class="w3-bar-item w3-button"><i class="fa fa-dollar fa-fw"></i>  Paid App</a>
+    <a href="#rawdata" class="w3-bar-item w3-button"><i class="fa fa-bar-chart fa-fw"></i>  Raw Data</a>
   </div>
 </nav>
 
@@ -55,238 +73,256 @@
 
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-light-grey" style="margin-left:300px;margin-top:43px;">
+<div class="w3-main w3-light-grey w3-padding-64" style="margin-left:350px; margin-top:40px; ">
+
   <!-- Overview -->
   <div class="w3-container" id="overview" >
     <header class="w3-container" style="padding-top:5vw">
-      <h2><b><i class="fa fa-users"></i>  Overview</b></h2>
+      <h1><b><i class="fa fa-users"></i>  Overview</b></h1>
     </header>
-
+    <!-- Overview part.1 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
 
-    <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </script>
+      </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
+    <!-- Overview part.2 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+
+          </script>
+      </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    <!-- Overview part.3 -->
+    <!-- Text explanation -->
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+
+          </script>
+      </div>
     </div>
   </div>
-  </div><br><br>
 
-    <!-- Free App -->
-  <div class="w3-container" id="freeapp" >
+  <!-- Free App -->
+  <div class="w3-container" id="freeapp">
     <header class="w3-container" style="padding-top:5vw">
-      <h2><b><i class="fa fa-heart"></i>  Free App</b></h2>
+      <h1><b><i class="fa fa-heart"></i>  Free App</b></h1>
     </header>
-
+    <!-- Free App part.1 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div id="if_Plot" style="width:100%;max-width:700px"></div>
+          <script>
+              var xArray = {{ x_group_f | safe }};
+              var yArray = {{ y_value_if | safe }};
 
-      <div id="if_Plot" style="width:100%;max-width:700px"></div>
-      <script>
-var xArray = {{ x_group_f | safe }};
-var yArray = {{ y_value_if | safe }};
+              var layout = {title: "{{ nation }} apple store(free)"};
 
-var layout = {title: "{{ nation }} apple store(free)"};
+              var data = [{labels:xArray, values:yArray, type:"pie"}];
 
-var data = [{labels:xArray, values:yArray, type:"pie"}];
-
-Plotly.newPlot("if_Plot", data, layout);
-</script>
+              Plotly.newPlot("if_Plot", data, layout);
+          </script>
+      </div>
     </div>
-
-
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-    <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-      <div id="gpf_Plot" style="width:100%;max-width:700px"></div>
-      <script>
-var xArray = {{ x_group_f | safe }};
-var yArray = {{ y_value | safe }};
-
-var layout = {title: "{{ nation }} google play store(free)"};
-
-var data = [{labels:xArray, values:yArray, type:"pie"}];
-
-Plotly.newPlot("gpf_Plot", data, layout);
-</script>
-    </div>
-
-
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
+    <!-- Free App part.2 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div id="gpf_Plot" style="width:100%;max-width:700px"></div>
+          <script>
+            var xArray = {{ x_group_f | safe }};
+            var yArray = {{ y_value | safe }};
+
+            var layout = {title: "{{ nation }} google play store(free)"};
+
+            var data = [{labels:xArray, values:yArray, type:"pie"}];
+
+            Plotly.newPlot("gpf_Plot", data, layout);
+          </script>
+        </div>
+      </div>
+    <!-- Free App part.3 -->
+    <!-- Text explanation -->
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+
+          </script>
+      </div>
     </div>
   </div>
-  </div><br><br>
 
-
-      <!-- Paid App -->
+  <!-- Paid App -->
   <div class="w3-container" id="paidapp" >
     <header class="w3-container" style="padding-top:5vw">
-      <h2><b><i class="fa fa-dollar"></i>  Paid App</b></h2>
+      <h1><b><i class="fa fa-dollar"></i>  Paid App</b></h1>
     </header>
-
+    <!-- Paid App part.1 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-    <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
+    <!-- Paid App part.2 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    <!-- Paid App part.3 -->
+    <!-- Text explanation -->
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
     </div>
   </div>
-  </div><br><br>
 
-      <!-- Raw Data -->
+  <!-- Raw Data -->
   <div class="w3-container" id="rawdata" >
     <header class="w3-container" style="padding-top:5vw">
-      <h2><b><i class="fa fa-bar-chart"></i>  Raw Data</b></h2>
+      <h1><b><i class="fa fa-bar-chart"></i>  Raw Data</b></h1>
     </header>
-
+    <!-- Raw Data part.1 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-    <div class="w3-row">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
+    <!-- Raw Data part.2 -->
+    <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    <!-- Raw Data part.3 -->
+    <!-- Text explanation -->
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
     </div>
-  </div>
   </div><br>
+
   <!-- Footer -->
   <footer class="w3-container w3-grey w3-center" style="padding:1.5vw;">
     <a href="#overview" class="w3-button w3-grey" style="font-size:large;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   </footer>
 
-  <!-- End page content -->
 </div>
 
+
 <script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
 
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      overlayBg.style.display = "none";
+    } else {
+      mySidebar.style.display = 'block';
+      overlayBg.style.display = "block";
+    }
   }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+  }
+
 </script>
 
 </body>

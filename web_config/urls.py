@@ -27,10 +27,6 @@ urlpatterns = [
     path('analysis', views.analysis),
 
 
-    path('free', views.free),
-    path('paid', views.paid),
     path('ml', views.ml),
-
-    path('sample', views.sample),
     path('aid', views.aid),
 ]

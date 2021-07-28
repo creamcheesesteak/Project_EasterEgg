@@ -11,6 +11,7 @@ font: 400 15px Lato, sans-serif;
 line-height: 1.8;
 color: #818181;
 }
+
 h2 {
 font-size: 24px;
 text-transform: uppercase;
@@ -50,6 +51,7 @@ font-size: 50px;
 color: #f4511e;
 font-size: 200px;
 }
+
 .thumbnail {
 padding: 0 0 15px 0;
 border: none;
@@ -64,6 +66,7 @@ margin-bottom: 10px;
 background-image: none;
 color: #f4511e;
 }
+
 .carousel-indicators li {
 border-color: #f4511e;
 }

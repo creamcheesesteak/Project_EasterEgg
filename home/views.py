@@ -27,11 +27,6 @@ def info(request):
     return render(request, 'info.html')
 
 
-def free(request):
-    return render(request, 'free.html')
-
-def paid(request):
-    return render(request, 'paid.html')
 
 def ml(request):
     return render(request, 'ml.html')
@@ -39,9 +34,6 @@ def ml(request):
 
 def aid(request):
     return render(request, 'index.html')
-
-def sample(request):
-    return render(request, 'sample.html')
 
 # def value(request):
 #     nation = request.get('nation')

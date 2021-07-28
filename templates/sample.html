@@ -3,17 +3,28 @@
     <title>EASTER EGG</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/lib/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&Jua&family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <style>
-        body,h1,h2,h3,span {font-family: 'Holtwood One SC', serif;}
-        h4,h5,h6,p,a,div {font-family: 'Montserrat', sans-serif;}
+        body, h1, h2, span {font-family: 'Holtwood One SC', serif;}
+        a,h3 {font-family: 'Montserrat', sans-serif; }
+        p,h4 {font-family: 'Gowun Dodum', sans-serif; font-size:1.6vw;}
+
+        h1 {font-size:3.2vw;}
+        h2 {font-size:2.7vw;}
+        h3 {font-size:2.3vw;}
+        h4 {font-size:2vw;}
+        p {font-size:1.8vw;}
 
         body, html {
           height: 100%;
@@ -29,153 +40,201 @@
           background-image: url("static/images/castle.jpg");
           min-height: 100%;
         }
+        .w3-bar .w3-button { padding: 1.2vw; }
+        .w3-large {font-size: 2rem!important;}
 
-        .w3-bar .w3-button {
-          padding: 16px;
-        }
-
-        form {
-         display: inline;
-         }
 
     </style>
 
+
     <body>
-    <!-- Navbar (sit on top) -->
+    <!-- Navbar -->
     <div class="w3-top">
-      <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-wide">EASTER EGG</a>
+      <div class="w3-bar w3-white w3-card" id="myNavbar" style="font-size:1.3vw;">
+        <a href="/home" class="w3-bar-item w3-button w3-wide">EASTER EGG</a>
         <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small">
-          <a href="#home" class="w3-bar-item w3-button">HOME</a>
-          <a href="#service" class="w3-bar-item w3-button"><i class="fa fa-pencil"></i> SERVICE</a>
-          <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-          <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-          <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        <div class="w3-right w3-hide-small" >
+          <a href="/home" class="w3-bar-item w3-button">HOME</a>
+          <a href="#service" class="w3-bar-item w3-button"><i class="fa fa-pencil"></i>  SERVICE  </a>
+          <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i>  WORK  </a>
+          <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i>  TEAM  </a>
+          <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>  CONTACT  </a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-          <i class="fa fa-bars"></i>
+          <i class="fa fa-bars fa-2x" style="padding:1vw 2vw"></i>
         </a>
       </div>
     </div>
-
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+    <!-- Sidebar on small screens -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-right w3-padding-16"  style="display:none; width:20vw;right:0; color:black;font-size:medium;" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-12">Close &times;</a>
+      <a href="/home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+      <a href="#service" onclick="w3_close()" class="w3-bar-item w3-button">SERVICE</a>
       <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
       <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
       <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
     </nav>
 
-    <!-- Home Container -->
-    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-        <h3 class="w3-large">Analysis of mobile applications by country</h3>
-        <form>
-        <div class="input-group" style="display: -webkit-box">
-          <input class="w3-input w3-border" type="text" style="width:40%" placeholder="국가 이름를 입력하세요" required>
-          <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="location='/analysis'">Search</button>
-        </div>
-      </form>
-<!--        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>-->
-      </div>
-    </header>
 
     <!-- Service Section -->
-    <div class="w3-container" style="padding:150px 20px" id="service">
-      <h2 class="w3-center">ABOUT SERVICES</h2>
-      <h4 class="w3-center w3-large">What we offer</h4>
-      <div class="w3-row-padding w3-center" style="margin-top:64px">
-        <div class="w3-third">
-          <a href="/free" style="text-decoration:none">
-            <i class="fa fa-heart w3-margin-bottom w3-jumbo w3-center"></i>
-            <h3 class="w3-large">FREE</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </a>
+    <div class="w3-container w3-large" style="padding:14vw 8vw;" id="service">
+      <h1 class="w3-center">ABOUT SERVICES</h1>
+      <h3 class="w3-center">What we offer</h3>
+      <div class="w3-row-padding w3-center" style="margin-top:12vw">
+        <!-- FREE APP Section -->
+        <div class="w3-half">
+            <!-- Trigger the modal with a icon -->
+          <i class="fa fa-heart w3-jumbo" onclick="document.getElementById('id01').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
+          <h2>FREE APP</h2>
+          <h4>Analysis service for free mobile application data</h4>
+            <!-- FREE APP Modal -->
+            <div id="id01" class="w3-modal">
+             <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black">
+                <header class="w3-container w3-grey w3-text-black">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn w3-padding-top" style="float: right;">&times;</span>
+                    <h2>FREE APP</h2></header>
+                 <div class="w3-container" style="text-align:center; max-width:fit-content;">
+                     <h4><b>무료 모바일 애플리케이션 데이터에 대한 분석 서비스</b></h4>
+                     <p>EasterEgg는 모바일 애플리케이션의 데이터를 취합하여 이용자들로 하여금 특정 국가를 선택하면 관련 국가의 App Store와 Google Play Store의 100위 순위에 리스트된 국가의 데이터를 불러와 시각화(통계치) 분석자료를 제공하는 서비스를 제공하고 있습니다.</p>
+                     <p>본 페이지는 무료 애플리케이션 시장분석 서비스에 대한 내용을 설명하는 페이지입니다. 애플리케이션 시장은 크게 무료앱과 유료앱으로 나뉘어지며, 이는 애플과 구글이 분류하는 정책에 따라 결정됩니다</p>
+                     <p>우리는 본 서비스를 통해 예비 개발자들이 사전 시장조사시 시장파악과 관련정보 획득에 도움을 줄 뿐만 아니라 마케팅, 연구자 등 앱 시장 파악에 기여하기를 기대합니다</p>
+                     <p>카테고리는 Games, Applications, Kids의 대분류를 가지며, 무료 앱 페이지는 Games, Kids의 비중이 적기 때문에 Applications에 대해 분석합니다</p>
+                     <p>Applications는 [Life, Leisure, Work, Edu]의 중분류를 가지며 중분류의 소 카테고리 분류는아래와 같습니다 </p>
+                     <p>1. Life : 'Food and Drink (Applications)', 'Health and Fitness (Applications)','Lifestyle (Applications)', 'Weather (Applications)', 'Medical (Applications)', 'Navigation (Applications)','Finance (Applications)'</p>
+                     <p>2. Leisure : 'Entertainment (Applications)', 'Shopping (Applications)', 'Social Networking (Applications)', 'Sports (Applications)', 'Travel (Applications)', 'Music (Applications)', 'Photo and Video (Applications)'</p>
+                     <p>3. Work : ['Business (Applications)', 'Developer Tools (Applications)', 'Graphics & Design (Applications)', 'Productivity (Applications)'</p>
+                     <p>4. Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Applications)', 'Reference (Applications)',' Magazines and Newspapers (Applications)', 'News (Applications)', 'Utilities (Applications)'</p>
+                     <p>무료 앱 분석 서비스는 위의 카테고리를 기준으로 애플과 구글에 따라 각 시장개요에 대한 중분류에 따른 overview를 제공하며, 내용은 아래와 같습니다</p>
+                     <img src="./static/images/free_overview.png" style="width:60vw; height:25vw;">
+                     <p>다음, 소분류의 비중을 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다. 다음, 활용한 raw data를 게재하여 이용자가 손쉽게 접근하여 가공, 수정할 수 있도록하였습니다</p>
+                 </div>
+                 <div class="w3-container w3-grey w3-padding">
+                     <button class="w3-btn w3-right w3-light-grey w3-border" onclick="document.getElementById('id01').style.display='none'" style="font-size: small;">Close</button>
+                 </div>
+             </div>
+           </div>
         </div>
-        <div class="w3-third">
-          <a href="/paid" style="text-decoration:none">
-            <i class="fa fa-dollar w3-margin-bottom w3-jumbo"></i>
-            <h3 class="w3-large">PAID</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </a>
-        </div>
-        <div class="w3-third">
-          <a href="/ml" style="text-decoration:none">
-            <i class="fa fa-line-chart w3-margin-bottom w3-jumbo"></i>
-            <h3 class="w3-large">Machine Learning</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </a>
-        </div>
+            <!-- PAID APP Section -->
+            <div class="w3-half">
+                <!-- Trigger the modal with a icon -->
+                <i class="fa fa-dollar w3-margin-bottom w3-jumbo" onclick="document.getElementById('id02').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
+                <h2>PAID APP</h2>
+                <h4>Analysis service for paid mobile application data</h4>
+                <!-- PAID APP Modal -->
+                 <div id="id02" class="w3-modal">
+                 <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black">
+                    <header class="w3-container w3-grey w3-text-black">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-closebtn w3-padding-top" style="float: right;">&times;</span>
+                        <h2>PAID APP</h2>
+                    </header>
+                        <!-- Modal content-->
+                        <div class="w3-container w3-animate-zoom" style="text-align:center; max-width:fit-content;">
+                            <h4><b>유료 모바일 애플리케이션 데이터에 대한 분석 서비스</b></h4>
+                            <p>EasterEgg는 모바일 애플리케이션의 데이터를 취합하여 이용자들로 하여금 특정 국가를 선택하면 관련 국가의 App Store와 Google Play Store의 100위 순위에 리스트된 국가의 데이터를 불러와 시각화(통계치) 분석자료를 제공하는 서비스를 제공하고 있습니다</p>
+                            <p>본 페이지는 유료 애플리케이션 시장분석 서비스에 대한 내용을 설명하는 페이지입니다</p>
+                            <p>애플리케이션 시장은 크게 무료앱과 유료앱으로 나뉘어지며, 이는 애플과 구글이 분류하는 정책에 따라 결정됩니다</p>
+                            <p>우리는 본 서비스를 통해 예비 개발자들이 사전 시장조사시 시장파악과 관련정보 획득에 도움을 줄 뿐만 아니라 마케팅, 연구자 등 앱 시장 파악에 기여하기를 기대합니다</p>
+                            <p>카테고리는 Games, Applications, Kids의 대분류를 가지며, 우리는 유료 앱 순위에 랭크된 앱들의 대부분은 Games임을 확인할 수 있었습니다</p>
+                            <p>따라서, 본 프로젝트에서는 유료앱의 타 카테고리 간 비교분석이 유의미하지 않을 것이라고 판단되어 유료 앱 중 '게임' 카테고리에 한정하여 게임 장르(롤플레잉, 아케이드, etc)의 선호도 비중을 시각화하여 분포와 선호도를 파악합니다</p>
+                            <p>Games에 대한 소 카테고리 분류는 아래와 같습니다</p>
+                            <p>Games : ‘Action (Games)’, ‘Adventure (Games)’, ‘Board (Games)’, ‘Card (Games)’, ‘Casino (Games)’, ‘Casual (Games)’, ‘Dice (Games)’, ‘Education (Games)’, ‘Family (Games)’, ‘Kids (Games)’, ‘Music (Games)’, ‘Puzzle (Games)’, ‘Racing (Games)’, ‘Role (Games)’ ‘Playing (Games)’, ‘Simulation (Games)’, ‘Sports (Games)’, ‘Strategy (Games)’, ‘Trivia (Games)’, ‘Word (Games)’</p>
+                            <p>본 서비스는 Games의 소 카테고리 분류에 따라 비중이 얼마나 차지하고 있는지 이용자가 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다</p>
+                            <img src="./static/images/paid_detailview.png" style="width:60vw; height:25vw;">
+                            <p>다음, 활용한 raw data를 게재하여 이용자가 손쉽게 접근하여 가공, 수정할 수 있도록하였습니다</p>
+                        </div>
+                        <div class="w3-container w3-grey w3-padding">
+                             <button class="w3-btn w3-right w3-light-grey w3-border" onclick="document.getElementById('id02').style.display='none'" style="font-size: small;">Close</button>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
       </div>
-    </div>
+
 
     <!-- Work Section -->
-    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="work">
-      <div class="w3-row-padding">
-        <div class="w3-col m6">
-          <h3>Our Work</h3>
-          <p>What we have created.</p>
-          <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
-        </div>
-<!--        <div class="w3-col m6">-->
-<!--         <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">&ndash;&gt;-->
-<!--        </div>-->
-      </div>
+    <div class="w3-container w3-light-grey w3-large" style="padding:12vw 8vw;" id="work">
+          <h1 class="w3-center">Our Work</h1>
+          <h3 class="w3-center">What we have created</h3>
+          <div class="w3-row-padding w3-center" style="margin-top:12vw">
+            <!-- Machine Learning -->
+            <div class="w3-half">
+              <a href="/analysis" style="text-decoration:none">
+                <i class="fa fa-line-chart w3-margin-bottom w3-jumbo"></i>
+                <h2>Machine Learning</h2>
+                <h4>Identify the factors that affect app rating and analyze the correlation between factors.</h4>
+              </a>
+            </div>
+            <!-- Naver Stock Scraping -->
+            <div class="w3-half">
+                <!-- Trigger the modal with a icon -->
+                <i class="fa fa-search w3-margin-bottom w3-jumbo" onclick="document.getElementById('id03').style.display='block'" data-toggle="modal" data-target="#myModal"></i>
+                <h2>Naver Stock Scraping</h2>
+                <h4>Collect all text data written on webpages using Python and BeautifulSoup</h4>
+                <!-- Naver Stock Scraping Modal -->
+                <div id="id03" class="w3-modal">
+                    <div class="w3-modal-content w3-card-8 w3-animate-zoom w3-text-black">
+                    <header class="w3-container w3-grey w3-text-black">
+                        <span onclick="document.getElementById('id03').style.display='none'" class="w3-closebtn w3-padding-top" style="float: right;">&times;</span>
+                        <h2>Naver Stock Scraping</h2>
+                    </header>
+                        <!-- Modal content-->
+                        <div class="w3-container w3-animate-zoom" style="text-align:center; max-width:fit-content;">
+                            <h4><b>네이버 시가총액 순위 데이터 스크래핑</b></h4>
+                            <p>Python, BeautifulSoup 라이브러리를 사용하여 여러 페이지에 작성된 모든 텍스트 데이터를 수집했다.</p>
+                        </div>
+                        <div class="w3-container w3-grey w3-padding">
+                             <button class="w3-btn w3-right w3-light-grey w3-border" onclick="document.getElementById('id03').style.display='none'" style="font-size: small;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
     </div>
 
     <!-- Team Section -->
-    <div class="w3-container" style="padding:128px 16px" id="team">
-      <h3 class="w3-center">THE TEAM</h3>
-      <p class="w3-center w3-large">The ones who runs this project</p>
-      <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-container w3-large" style="padding:12vw 8vw;" id="team">
+      <h1 class="w3-center">THE TEAM</h1>
+      <h3 class="w3-center">The ones who runs this project</h3>
+      <div class="w3-row-padding w3-grayscale" style="margin-top:12vw">
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-            <div class="w3-container">
-              <h3>TaeHyuk Lim</h3>
-              <p class="w3-opacity">TEAM LEADER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/creamcheesesteak'"><i class="fa fa-envelope"></i> Contact</button></p>
+            <div class="w3-container w3-center">
+              <h3>TaeHyeok Im</h3>
+                <p class="w3-opacity">TEAM LEADER</p>
+                <p>Project Management</p><p>Data Preprocessing</p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/creamcheesesteak'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-            <div class="w3-container">
-              <h3>Mio SEO</h3>
+            <div class="w3-container w3-center">
+              <h3>Mio Seo</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/mmeooo'"><i class="fa fa-envelope"></i> Contact</button></p>
+              <p>Web Design</p><p>Data Scraping </p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/mmeooo'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-            <div class="w3-container">
+            <div class="w3-container w3-center">
               <h3>Solbi Choi</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/SolbiChoi'"><i class="fa fa-envelope"></i> Contact</button></p>
+              <p>Data Visualization</p><p>Machine Learning</p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/SolbiChoi'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <div class="w3-card">
-            <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-            <div class="w3-container">
-              <h3>JungHue Kim</h3>
+            <div class="w3-container w3-center">
+              <h3>JeongHue Kim</h3>
               <p class="w3-opacity">TEAM MEMBER</p>
-              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-              <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/aidsfintech'"><i class="fa fa-envelope"></i> Contact</button></p>
+              <p>Database Design</p><p>Machine Learning</p>
+              <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/aidsfintech'"><i class="fa fa-envelope"></i> Contact</button></h4>
             </div>
           </div>
         </div>
@@ -183,99 +242,64 @@
     </div>
 
 
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-      <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p id="caption" class="w3-opacity w3-large"></p>
-      </div>
-    </div>
-
-   <!-- Contact Section -->
-    <div class="w3-container w3-grey" style="padding:128px 16px" id="contact">
-      <h3 class="w3-center">CONTACT</h3>
-      <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-      <div style="margin-top:48px">
-        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Seoul, Korea</p>
-        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <!-- Contact Section -->
+    <div class="w3-container w3-grey w3-large" style="padding:8vw 8vw;" id="contact">
+      <h1 class="w3-center">CONTACT</h1>
+      <h3 class="w3-center">Lets get in touch. Send us a message:</h3>
+      <div style="margin-top:8vw">
+        <h4><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Seoul, Korea</h4>
+        <h4><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</h4>
+        <h4><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</h4>
         <br>
         <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-          <p>
+          <h4><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></h4>
+          <h4><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></h4>
+          <h4><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></h4>
+          <h4><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></h4>
+          <h4>
             <button class="w3-button w3-black" type="submit">
-              <i class="fa fa-paper-plane"></i> SEND MESSAGE
-            </button>
-          </p>
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
+          </h4>
         </form>
-<!--        &lt;!&ndash; Image of location/map &ndash;&gt;-->
-<!--        <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">-->
       </div>
     </div>
 
+
     <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
-      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <footer class="w3-center w3-black" style="padding:1.5vw;">
+      <a href="#home" class="w3-button" style="color:white; font-size:large;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     </footer>
 
 
-<!--    Skill section -->
-<!--    <div class="w3-container w3-light-grey w3-padding-64">-->
-<!--      <div class="w3-row-padding">-->
-<!--        <div class="w3-col m6">-->
-<!--          <h3>Our Skills.</h3>-->
-<!--          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>-->
-<!--          tempor incididunt ut labore et dolore.</p>-->
-<!--          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>-->
-<!--          tempor incididunt ut labore et dolore.</p>-->
-<!--        </div>-->
-<!--        <div class="w3-col m6">-->
-<!--          <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>-->
-<!--          <div class="w3-grey">-->
-<!--            <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>-->
-<!--          </div>-->
-<!--          <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>-->
-<!--          <div class="w3-grey">-->
-<!--            <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>-->
-<!--          </div>-->
-<!--          <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>-->
-<!--          <div class="w3-grey">-->
-<!--            <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
+   <script>
 
-    <script>
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
+   // Get the modal
+    var modal = document.getElementById('id01');
+    var modal = document.getElementById('id02');
+    var modal = document.getElementById('id03');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {modal.style.display = "none";} }
 
 
-    // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar");
 
     function w3_open() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-      } else {
-        mySidebar.style.display = 'block';
+      if (mySidebar.style.display == 'block') {
+        mySidebar.style.display = 'none'; }
+      else {
+        mySidebar.style.display = 'block'; }
       }
-    }
+
+     // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
 
     // Close the sidebar with the close button
     function w3_close() {
-        mySidebar.style.display = "none";
+        mySidebar.style.display = 'none';
     }
-    </script>
 
+
+    </script>
     </body>
 </html>
