@@ -27,6 +27,11 @@ def info(request):
     return render(request, 'info.html')
 
 
+def free(request):
+    return render(request, 'free.html')
+
+def paid(request):
+    return render(request, 'paid.html')
 
 def ml(request):
     return render(request, 'ml.html')
@@ -34,6 +39,9 @@ def ml(request):
 
 def aid(request):
     return render(request, 'index.html')
+
+def sample(request):
+    return render(request, 'sample.html')
 
 # def value(request):
 #     nation = request.get('nation')
@@ -49,6 +57,83 @@ def analysis(request):
     df_gpf = pd.read_sql("SELECT * FROM gp_f_" +nation+ "", db_nation, index_col=None)
     df_gpp = pd.read_sql("SELECT * FROM gp_p_" +nation+ "", db_nation, index_col=None)
 
+    # overview 100 stacked bar
+    counts_if = collections.Counter(df_if['App_cat'])
+    counts_ip = collections.Counter(df_ip['App_cat'])
+    counts_gpf = collections.Counter(df_gpf['App_cat'])
+    counts_gpp = collections.Counter(df_gpp['App_cat'])
+    dict_gpf = {'Games_gpf': ['Action (Games)', 'Adventure (Games)', 'Board (Games)', 'Card (Games)', 'Casino (Games)',
+                              'Casual (Games)', 'Dice (Games)', 'Education (Games)', 'Family (Games)', 'Family (Games)',
+                              'Kids (Games)', 'Music (Games)', 'Puzzle (Games)', 'Racing (Games)', 'Role (Games)',
+                              'Playing (Games)', 'Simulation (Games)', 'Sports (Games)', 'Strategy (Games)',
+                              'Trivia (Games)', 'Word (Games)', 'Arcade (Games)', 'Educational (Games)',
+                              'Role Playing (Games)'],
+                'Application_gpf': ['Food and Drink (Applications)', 'Health and Fitness (Applications)',
+                                    'Lifestyle (Applications)',
+                                    'Weather (Applications)', 'Medical (Applications)', 'Navigation (Applications)',
+                                    'Finance (Applications)', 'Entertainment (Applications)', 'Shopping (Applications)',
+                                    'Social Networking (Applications)', 'Sports (Applications)',
+                                    'Travel (Applications)',
+                                    'Music (Applications)', 'Photo and Video (Applications)', 'Business (Applications)',
+                                    'Developer Tools (Applications)', 'Graphics & Design (Applications)',
+                                    'Productivity (Applications)',
+                                    'Books (Applications)', 'Catalogs (Applications)', 'Education (Applications)',
+                                    'Reference (Applications)',
+                                    'Magazines and Newspapers (Applications)', 'News (Applications)',
+                                    'Utilities (Applications)']}
+    dict_gpp = {'Games_gpp': ['Action (Games)', 'Adventure (Games)', 'Board (Games)', 'Card (Games)', 'Casino (Games)',
+                              'Casual (Games)', 'Dice (Games)', 'Education (Games)', 'Family (Games)', 'Family (Games)',
+                              'Kids (Games)', 'Music (Games)', 'Puzzle (Games)', 'Racing (Games)', 'Role (Games)',
+                              'Playing (Games)', 'Simulation (Games)', 'Sports (Games)', 'Strategy (Games)',
+                              'Trivia (Games)', 'Word (Games)', 'Arcade (Games)', 'Educational (Games)',
+                              'Role Playing (Games)'],
+                'Application_gpp': ['Food and Drink (Applications)', 'Health and Fitness (Applications)',
+                                    'Lifestyle (Applications)',
+                                    'Weather (Applications)', 'Medical (Applications)', 'Navigation (Applications)',
+                                    'Finance (Applications)', 'Entertainment (Applications)', 'Shopping (Applications)',
+                                    'Social Networking (Applications)', 'Sports (Applications)',
+                                    'Travel (Applications)',
+                                    'Music (Applications)', 'Photo and Video (Applications)', 'Business (Applications)',
+                                    'Developer Tools (Applications)', 'Graphics & Design (Applications)',
+                                    'Productivity (Applications)',
+                                    'Books (Applications)', 'Catalogs (Applications)', 'Education (Applications)',
+                                    'Reference (Applications)',
+                                    'Magazines and Newspapers (Applications)', 'News (Applications)',
+                                    'Utilities (Applications)']}
+    gpf_g = 0
+    gpp_g = 0
+    sum_gpf_b = 0
+    sum_gpp_b = 0
+
+    for category in dict_gpf['Games_gpf']:
+        for key, value in counts_gpf.items():
+            if key == category:
+                sum_gpf_b = value + sum_gpf_b
+    gpf_g = sum_gpf_b
+    print(sum_gpf_b)
+
+    for category in dict_gpp['Games_gpp']:
+        for key, value in counts_gpp.items():
+            if key == category:
+                sum_gpp_b = value + sum_gpp_b
+    gpp_g = sum_gpp_b
+    print(sum_gpp_b)
+
+    if_g = counts_if['Games']
+    ip_g = counts_ip['Games']
+    if_a = 100 - counts_if['Games']
+    ip_a = 100 - counts_ip['Games']
+    gpf_a = 100 - gpf_g
+    gpp_a = 100 - gpp_g
+    cnt_g_list = [gpp_g, gpf_g, ip_g, if_g]
+    cnt_a_list = [gpp_a, gpf_a, ip_a, if_a]
+    y_bar = ['Googe Play (paid)', 'Googe Play (free)', 'App Store (paid)', 'App Store (free)']
+
+    y_group_ov = y_bar
+    x_game = cnt_g_list
+    x_app = cnt_a_list
+
+    # free circle chart
     counts_if = collections.Counter(df_if['App_cat'])
     counts_gpf = collections.Counter(df_gpf['App_cat'])
     dict = {'Life': ['Food and Drink (Applications)', 'Health and Fitness (Applications)', 'Lifestyle (Applications)',
@@ -102,5 +187,9 @@ def analysis(request):
 
         'y_value': y_value_gdf,
 
+        'y_group_ov': y_group_ov,
+        'x_game': x_game,
+        'x_app': x_app,
     }
     return render(request, 'analysis.html', context)
+

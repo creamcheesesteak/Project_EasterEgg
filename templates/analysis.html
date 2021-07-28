@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src='https://cdn.plot.ly/plotly-2.3.0.min.js'></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <style>
@@ -89,9 +90,40 @@
           dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <!-- Image explanation -->
-        <div></div>
+        <div id='overview_Div'style="width:90%;max-width:700px"></div>
           <script>
+                var trace1 = {
+          x: {{ x_game | safe}},
+          y: {{ y_group_ov | safe}},
+          name: 'Games',
+          orientation: 'h',
+          marker: {
+            color: 'rgba(55,128,191,0.6)',
+            width: 1
+          },
+          type: 'bar'
+        };
 
+        var trace2 = {
+          x: {{ x_app | safe}},
+          y: {{ y_group_ov | safe}},
+          name: 'Applications',
+          orientation: 'h',
+          type: 'bar',
+          marker: {
+            color: 'rgba(255,153,51,0.6)',
+            width: 1
+          }
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+          title: 'OverView of whole market by {{ nation }}',
+          barmode: 'stack'
+        };
+
+        Plotly.newPlot('overview_Div', data, layout);
           </script>
       </div>
     </div>
@@ -141,7 +173,7 @@
           dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <!-- Image explanation -->
-        <div id="if_Plot" style="width:100%;max-width:700px"></div>
+        <div id="if_Plot" style="width:90%;max-width:700px"></div>
           <script>
               var xArray = {{ x_group_f | safe }};
               var yArray = {{ y_value_if | safe }};
@@ -163,7 +195,7 @@
           dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <!-- Image explanation -->
-        <div id="gpf_Plot" style="width:100%;max-width:700px"></div>
+        <div id="gpf_Plot" style="width:90%;max-width:700px"></div>
           <script>
             var xArray = {{ x_group_f | safe }};
             var yArray = {{ y_value | safe }};
