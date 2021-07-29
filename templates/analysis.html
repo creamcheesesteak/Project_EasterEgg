@@ -139,36 +139,6 @@
           </script>
       </div>
     </div>
-    <!-- Overview part.2 -->
-    <!-- Text explanation -->
-    <div class="w3-row w3-padding-16">
-      <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- Image explanation -->
-        <div></div>
-          <script>
-
-          </script>
-      </div>
-    </div>
-    <!-- Overview part.3 -->
-    <!-- Text explanation -->
-    <div class="w3-row w3-padding-16">
-      <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- Image explanation -->
-        <div></div>
-          <script>
-
-          </script>
-      </div>
-    </div>
   </div>
 
   <!-- Free App -->
@@ -210,6 +180,27 @@
 
             Plotly.newPlot("if_Plot", data, layout);
       </script>
+
+        <p>다음, 애플 무료의 소분류의 비중을 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다</p>
+        <div id='if_detail_sun' style="width:90%;max-width:700px"></div>
+        <script>
+                    var data = [{
+          type: "sunburst",
+          labels: {{ labels_if | safe }},
+          parents: {{ parents_if | safe }},
+          values:  {{ values_if | safe }},
+          outsidetextfont: {size: 30, color: "#377eb8"},
+          leaf: {opacity: 0.4},
+          marker: {line: {width: 2}},
+        }];
+
+        var layout = {
+          margin: {l: 0, r: 0, b: 0, t: 0},
+          width: 500,
+          height: 500
+        };
+        Plotly.newPlot('if_detail_sun', data, layout);
+      </script>
         </div>
       </div>
     <!-- Free App part.3 -->
@@ -230,6 +221,27 @@
 
             Plotly.newPlot("gpf_Plot", data, layout);
           </script>
+
+        <p>다음, 구글 무료의 소분류의 비중을 살펴볼 수 있도록 detailview를 제공하며, 내용은 아래와 같습니다</p>
+        <div id='gpf_detail_sun' style="width:90%;max-width:700px"></div>
+        <script>
+                    var data = [{
+          type: "sunburst",
+          labels: {{ labels_gpf | safe }},
+          parents: {{ parents_gpf | safe }},
+          values:  {{ values_gpf | safe }},
+          outsidetextfont: {size: 30, color: "#377eb8"},
+          leaf: {opacity: 0.4},
+          marker: {line: {width: 2}},
+        }];
+
+        var layout = {
+          margin: {l: 0, r: 0, b: 0, t: 0},
+          width: 500,
+          height: 500
+        };
+        Plotly.newPlot('gpf_detail_sun', data, layout);
+      </script>
       </div>
     </div>
   </div>
@@ -271,34 +283,7 @@
           </script>
       </div>
     </div>
-    <!-- Paid App part.2 -->
-    <!-- Text explanation -->
-    <div class="w3-row w3-padding-16">
-      <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- Image explanation -->
-        <div></div>
-          <script>
-          </script>
-      </div>
-    </div>
-    <!-- Paid App part.3 -->
-    <!-- Text explanation -->
-    <div class="w3-row w3-padding-16">
-      <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- Image explanation -->
-        <div></div>
-          <script>
-          </script>
-      </div>
-    </div>
+
   </div>
 
   <!-- Raw Data -->
@@ -320,35 +305,7 @@
           </script>
       </div>
     </div>
-    <!-- Raw Data part.2 -->
-    <!-- Text explanation -->
-    <div class="w3-row w3-padding-16">
-      <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- Image explanation -->
-        <div></div>
-          <script>
-          </script>
-      </div>
-    </div>
-    <!-- Raw Data part.3 -->
-    <!-- Text explanation -->
-    <div class="w3-row w3-padding-16">
-      <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- Image explanation -->
-        <div></div>
-          <script>
-          </script>
-      </div>
-    </div>
-  </div><br>
+
 </div>
 
 
