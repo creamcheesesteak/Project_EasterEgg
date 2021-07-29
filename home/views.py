@@ -52,10 +52,10 @@ def analysis(request):
     nation = request.GET.get('nation')
     db_nation = sqlite3.connect('C:/Develops/Project_multi_A3/nation.db')
     c = db_nation.cursor()
-    df_if = pd.read_sql("SELECT * FROM i_f_" +nation+ "", db_nation, index_col=None)
-    df_ip = pd.read_sql("SELECT * FROM i_p_" +nation+ "", db_nation, index_col=None)
-    df_gpf = pd.read_sql("SELECT * FROM gp_f_" +nation+ "", db_nation, index_col=None)
-    df_gpp = pd.read_sql("SELECT * FROM gp_p_" +nation+ "", db_nation, index_col=None)
+    df_if = pd.read_sql("SELECT * FROM i_f_"+nation+"", db_nation, index_col=None)
+    df_ip = pd.read_sql("SELECT * FROM i_p_"+nation+"", db_nation, index_col=None)
+    df_gpf = pd.read_sql("SELECT * FROM gp_f_"+nation+"", db_nation, index_col=None)
+    df_gpp = pd.read_sql("SELECT * FROM gp_p_"+nation+"", db_nation, index_col=None)
 
     # overview 100 stacked bar
     counts_if = collections.Counter(df_if['App_cat'])
@@ -175,10 +175,25 @@ def analysis(request):
         sum_gdf_c = 0
 
     xArray_if = fr_group;
-    y_value_if = count_if_group;
 
+    y_value_if = count_if_group;
     y_value_gdf = count_gdf_group;
 
+
+    # paid sunburst chart
+    labels = ['Total', 'Apps', 'Games']
+    parents = ['', 'Total', 'Total']
+    values = [len(df_gpp), gpp_a, gpp_g, ]
+    for category in dict_gpp['Games_gpp']:
+        for key, value in counts_gpp.items():
+            if key == category:
+                labels.append(key)
+                parents.append('Games')
+                values.append(value)
+
+    labels_sun = labels
+    parents_sun = parents
+    values_sun = values
 
     context = {
         'nation':nation,
@@ -190,6 +205,10 @@ def analysis(request):
         'y_group_ov': y_group_ov,
         'x_game': x_game,
         'x_app': x_app,
+
+        'labels_sun': labels_sun,
+        'parents_sun': parents_sun,
+        'values_sun': values_sun,
     }
     return render(request, 'analysis.html', context)
 

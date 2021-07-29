@@ -10,6 +10,7 @@
 
 <script src='https://cdn.plot.ly/plotly-2.3.0.min.js'></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src='https://cdn.plot.ly/plotly-2.3.0.min.js'></script>
 
 <style>
 
@@ -85,12 +86,15 @@
     <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
       <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h1 class="w3-text-teal">Information</h1>
+        <p>EasterEgg는 모바일 애플리케이션의 데이터를 취합하여 이용자들로 하여금 특정 국가를 선택하면 관련 국가의 App Store와 Google Play Store의 100위 순위에 리스트된 국가의 데이터를 불러와 시각화(통계치) 분석자료를 제공하는 서비스를 제공하고 있습니다</p>
+        <p>애플리케이션 시장은 크게 무료앱과 유료앱으로 나뉘어지며, 이는 애플과 구글이 분류하는 정책에 따라 결정됩니다</p>
+        <p>우리는 본 서비스를 통해 예비 개발자들이 사전 시장조사시 시장파악과 관련정보 획득에 도움을 줄 뿐만 아니라 마케팅, 연구자 등 앱 시장 파악에 기여하기를 기대합니다</p>
+        <p></p>
+        <p>애플스토어와 구글스토어의 일반앱과 게임앱을 나타낸 시각화 자료입니다</p>
+        <p>맨 위부터 apple store(free), apple store(paid), google play(free), google play(paid) 순서 입니다<p>
         <!-- Image explanation -->
-        <div id='overview_Div'style="width:90%;max-width:700px"></div>
+        <div id='overview_stacked'style="width:90%;max-width:700px"></div>
           <script>
                 var trace1 = {
           x: {{ x_game | safe}},
@@ -123,7 +127,7 @@
           barmode: 'stack'
         };
 
-        Plotly.newPlot('overview_Div', data, layout);
+        Plotly.newPlot('overview_stacked', data, layout);
           </script>
       </div>
     </div>
@@ -168,35 +172,47 @@
     <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
       <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h1 class="w3-text-teal">Information</h1>
+        <p>카테고리는 Games, Applications, Kids의 대분류를 가지며, 무료 앱 페이지는 Games, Kids의 비중이 적기 때문에 Applications에 대해 분석합니다</p>
+        <p>Applications는 [Life, Leisure, Work, Edu]의 중분류를 가지며 중분류의 소 카테고리 분류는아래와 같습니다 </p>
+        <p>1.Life : 'Food and Drink (Applications)', 'Health and Fitness (Applications)','Lifestyle (Applications)', 'Weather (Applications)', 'Medical (Applications)', 'Navigation (Applications)','Finance (Applications)'</p>
+        <p>2.Leisure : 'Entertainment (Applications)', 'Shopping (Applications)', 'Social Networking (Applications)', 'Sports (Applications)', 'Travel (Applications)', 'Music (Applications)', 'Photo and Video (Applications)'</p>
+        <p>3.Work : ['Business (Applications)', 'Developer Tools (Applications)', 'Graphics & Design (Applications)', 'Productivity (Applications)'</p>
+        <p>4.Edu : 'Books (Applications)', 'Catalogs (Applications)', 'Education (Applications)', 'Reference (Applications)',' Magazines and Newspapers (Applications)', 'News (Applications)', 'Utilities (Applications)'</p>
+        <p></p>
         <!-- Image explanation -->
-        <div id="if_Plot" style="width:90%;max-width:700px"></div>
-          <script>
-              var xArray = {{ x_group_f | safe }};
-              var yArray = {{ y_value_if | safe }};
 
-              var layout = {title: "{{ nation }} apple store(free)"};
-
-              var data = [{labels:xArray, values:yArray, type:"pie"}];
-
-              Plotly.newPlot("if_Plot", data, layout);
-          </script>
       </div>
     </div>
     <!-- Free App part.2 -->
     <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
       <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h1 class="w3-text-teal">Apple store</h1>
+        <p>무료 앱 분석 서비스는 위의 카테고리를 기준으로 애플의 시장개요에 대한 중분류에 따른 overview를 제공하며, 내용은 아래와 같습니다</p>
+        <!-- Image explanation -->
+        <div id="if_Plot" style="width:90%;max-width:700px"></div>
+        <script>
+            var xArray = {{ x_group_f | safe }};
+            var yArray = {{ y_value_if | safe }};
+
+            var layout = {title: "{{ nation }} apple store(free)"};
+
+            var data = [{labels:xArray, values:yArray, type:"pie"}];
+
+            Plotly.newPlot("if_Plot", data, layout);
+      </script>
+        </div>
+      </div>
+    <!-- Free App part.3 -->
+    <!-- Text explanation -->
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">google play</h1>
+        <p>무료 앱 분석 서비스는 위의 카테고리를 기준으로 구글의 시장개요에 대한 중분류에 따른 overview를 제공하며, 내용은 아래와 같습니다</p>
         <!-- Image explanation -->
         <div id="gpf_Plot" style="width:90%;max-width:700px"></div>
-          <script>
+        <script>
             var xArray = {{ x_group_f | safe }};
             var yArray = {{ y_value | safe }};
 
@@ -205,21 +221,6 @@
             var data = [{labels:xArray, values:yArray, type:"pie"}];
 
             Plotly.newPlot("gpf_Plot", data, layout);
-          </script>
-        </div>
-      </div>
-    <!-- Free App part.3 -->
-    <!-- Text explanation -->
-    <div class="w3-row w3-padding-16">
-      <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <!-- Image explanation -->
-        <div></div>
-          <script>
-
           </script>
       </div>
     </div>
@@ -234,13 +235,31 @@
     <!-- Text explanation -->
     <div class="w3-row w3-padding-16">
       <div class="w3-container">
-        <h1 class="w3-text-teal">Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h1 class="w3-text-teal">Information</h1>
+        <p>카테고리는 Games, Applications, Kids의 대분류를 가지며, 우리는 유료 앱 순위에 랭크된 앱들의 대부분은 Games임을 확인할 수 있었습니다</p>
+        <p>따라서, 본 프로젝트에서는 유료앱의 타 카테고리 간 비교분석이 유의미하지 않을 것이라고 판단되어 유료 앱 중 '게임' 카테고리에 한정하여 게임 장르(롤플레잉, 아케이드, etc)의 선호도 비중을 시각화하여 분포와 선호도를 파악합니다</p>
+        <p>Games에 대한 소 카테고리 분류는 아래와 같습니다</p>
+        <p>Games : ‘Action (Games)’, ‘Adventure (Games)’, ‘Board (Games)’, ‘Card (Games)’, ‘Casino (Games)’, ‘Casual (Games)’, ‘Dice (Games)’, ‘Education (Games)’, ‘Family (Games)’, ‘Kids (Games)’, ‘Music (Games)’, ‘Puzzle (Games)’, ‘Racing (Games)’, ‘Role (Games)’ ‘Playing (Games)’, ‘Simulation (Games)’, ‘Sports (Games)’, ‘Strategy (Games)’, ‘Trivia (Games)’, ‘Word (Games)’</p>
+        <p>유료 앱 분석 서비스는 위의 카테고리를 기준으로 구글 시장개요에 따른 detail view를 제공하며, 내용은 아래와 같습니다. 애플은 게임에 대한 세부 카테고리를 제공하지 않으므로, 게임에 대한 세부 카테고리를 제공하는 구글순위만을 분석해 제공합니다</p>
         <!-- Image explanation -->
-        <div></div>
+        <div id='paid_gpp_sun' style="width:90%;max-width:700px"></div>
           <script>
+                        var data = [{
+              type: "sunburst",
+              labels: {{ labels_sun | safe }},
+              parents: {{ parents_sun | safe }},
+              values:  {{ values_sun | safe }},
+              outsidetextfont: {size: 30, color: "#377eb8"},
+              leaf: {opacity: 0.4},
+              marker: {line: {width: 2}},
+            }];
+
+            var layout = {
+              margin: {l: 0, r: 0, b: 0, t: 0},
+              width: 500,
+              height: 500
+            };
+            Plotly.newPlot('paid_gpp_sun', data, layout);
           </script>
       </div>
     </div>
