@@ -50,7 +50,7 @@ def sample(request):
 
 def analysis(request):
     nation = request.GET.get('nation')
-    db_nation = sqlite3.connect('C:/Develops/Project_multi_A3/nation.db')
+    db_nation = sqlite3.connect('./nation.db')
     c = db_nation.cursor()
     df_if = pd.read_sql("SELECT * FROM i_f_"+nation+"", db_nation, index_col=None)
     df_ip = pd.read_sql("SELECT * FROM i_p_"+nation+"", db_nation, index_col=None)
@@ -236,7 +236,7 @@ def analysis(request):
     # labels_if
     # parents_if
     # values_if
-    #
+    ##
     # labels_gpf
     # parents_gpf
     # values_gpf
