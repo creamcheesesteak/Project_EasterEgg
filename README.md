@@ -98,3 +98,4 @@
 
   - 7/24 ~ 7/30 : PPT, 보고서 작성
 
+[![SC2 Video](https://img.youtube.com/vi/p70Zis63m28/0.jpg)](https://www.youtube.com/watch?v=p70Zis63m28)
