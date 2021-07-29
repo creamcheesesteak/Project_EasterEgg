@@ -26,16 +26,16 @@ def home(request):
 def info(request):
     return render(request, 'info.html')
 
+def ml(request):
+    return render(request, 'ml.html')
+
+
 
 def free(request):
     return render(request, 'free.html')
 
 def paid(request):
     return render(request, 'paid.html')
-
-def ml(request):
-    return render(request, 'ml.html')
-
 
 def aid(request):
     return render(request, 'index.html')

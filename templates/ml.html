@@ -1,10 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Machine Learning</title>
-</head>
-<body>
-    <h1>머신러닝 분석 결과</h1>
+<html>
+<title>ANALYSIS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&Jua&family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src='https://cdn.plot.ly/plotly-2.3.0.min.js'></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style>
+
+  html,body, h1, h2, h3 {font-family: 'Montserrat', sans-serif; }
+  p,h4 {font-family: 'Gowun Dodum', sans-serif; font-size:1.6vw;}
+  #text {font-family: 'Holtwood One SC', serif;}
+
+  h1 {font-size:3.2vw;}
+  h2 {font-size:2.7vw;}
+  h3 {font-size:2.3vw;}
+  h4 {font-size:2vw;}
+  p, select, button {font-size:1.8vw;}
+
+
+</style>
+
+<body class="w3-white">
+<!-- Top container -->
+<div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-white" onclick="w3_open();"><i class="fa fa-bars"></i></button>
+  <span class="w3-bar-item w3-right">EASTER EGG</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-medium" style="z-index:3;width:max-content;" id="mySidebar"><br>
+  <hr>
+  <div class="w3-bar-block" >
+    <a href="#" class="w3-bar-item w3-button w3-hide-large w3-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close</a>
+    <a href="/" class="w3-bar-item w3-button"><i class="fa fa-mail-reply fa-fw"></i>  HOME</a>
+    <a href="/info" class="w3-bar-item w3-button"><i class="fa fa-smile-o fa-fw"></i>  INFO</a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-light-grey w3-padding-64" style="margin-left:32%;margin-top:4%; ">
+  <div class="w3-container" id="ml">
+    <header class="w3-container" style="padding-top:5vw">
+      <h1><b><i class="fa fa-line-chart"></i>  Machine Learning</b></h1>
+    </header>
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
+    </div>
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
+    </div>
+    <div class="w3-row w3-padding-16">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <!-- Image explanation -->
+        <div></div>
+          <script>
+          </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-grey w3-center" style="padding:1vw;">
+    <a href="#ml" class="w3-button w3-grey" style="font-size:large;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
+
+
+<script>
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
+
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
+
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      overlayBg.style.display = "none";
+    } else {
+      mySidebar.style.display = 'block';
+      overlayBg.style.display = "block";
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+  }
+
+</script>
+
+
 </body>
 </html>
