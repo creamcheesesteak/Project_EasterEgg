@@ -162,22 +162,22 @@ def analysis(request):
         print(sum_if_c)
         sum_if_c = 0
 
-    count_gdf_group = []
-    sum_gdf_c = 0
+    count_gpf_group = []
+    sum_gpf_c = 0
     for groupgpf in fr_group:  # group : key = Life
         groupgpf = dict[groupgpf]  # dict['Life']
         for category in groupgpf:  # Food and Drink (Applications)
             for key, value in counts_gpf.items():
                 if key == category:
-                    sum_gdf_c = value + sum_gdf_c
-        count_gdf_group.append(sum_gdf_c)
-        print(sum_gdf_c)
-        sum_gdf_c = 0
+                    sum_gpf_c = value + sum_gpf_c
+        count_gpf_group.append(sum_gpf_c)
+        print(sum_gpf_c)
+        sum_gpf_c = 0
 
     xArray_if = fr_group;
 
     y_value_if = count_if_group;
-    y_value_gdf = count_gdf_group;
+    y_value_gpf = count_gpf_group;
 
 
     # paid sunburst chart
@@ -195,12 +195,59 @@ def analysis(request):
     parents_sun = parents
     values_sun = values
 
+    # free sunset chart
+    labels_if = ['Total', 'Apps', 'Games']
+    labels_gpf = ['Total', 'Apps', 'Games']
+    parents_if = ['', 'Total', 'Total']
+    parents_gpf = ['', 'Total', 'Total']
+    values_if = [len(df_if), if_a, if_g]
+    values_gpf = [len(df_gpf), gpf_a, gpf_g]
+
+
+    set_group_if = {x: y for x, y in zip(fr_group, count_if_group)}
+    set_group_gpf = {x: y for x, y in zip(fr_group, count_gpf_group)}
+
+    for key, value in set_group_if.items():
+        labels_if.append(key)
+        parents_if.append('Apps')
+        values_if.append(value)
+    for key, value in set_group_gpf.items():
+        labels_gpf.append(key)
+        parents_gpf.append('Apps')
+        values_gpf.append(value)
+
+    for cats in dict:
+        t_cats = cats
+        for cat in dict[t_cats]:
+            for key, value in counts_if.items():
+                if key == cat:
+                    labels_if.append(cat)
+                    parents_if.append(cats)
+                    values_if.append(value)
+    for cats in dict:
+        t_cats = cats
+        for cat in dict[t_cats]:
+            for key, value in counts_gpf.items():
+                if key == cat:
+                    labels_gpf.append(cat)
+                    parents_gpf.append(cats)
+                    values_gpf.append(value)
+
+    # labels_if
+    # parents_if
+    # values_if
+    #
+    # labels_gpf
+    # parents_gpf
+    # values_gpf
+
+
     context = {
         'nation':nation,
         'x_group_f': xArray_if,
         'y_value_if': y_value_if,
 
-        'y_value': y_value_gdf,
+        'y_value': y_value_gpf,
 
         'y_group_ov': y_group_ov,
         'x_game': x_game,
@@ -208,7 +255,15 @@ def analysis(request):
 
         'labels_sun': labels_sun,
         'parents_sun': parents_sun,
+        'values_gpf': values_gpf,
+
+        'labels_if': labels_if,
+        'parents_if': parents_if,
+        'values_if': values_if,
+        'labels_gpf': labels_gpf,
+        'parents_gpf': parents_gpf,
         'values_sun': values_sun,
+
     }
     return render(request, 'analysis.html', context)
 
