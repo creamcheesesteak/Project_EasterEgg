@@ -24,20 +24,31 @@
   h4 {font-size:2vw;}
   p, select, button {font-size:1.8vw;}
 
-
 </style>
 
 <body class="w3-white">
-<!-- Top container -->
-<div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
-  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-white" onclick="w3_open();"><i class="fa fa-bars"></i></button>
-  <span class="w3-bar-item w3-right">EASTER EGG</span>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card w3-medium" id="myNavbar">
+    <a href="/" class="w3-bar-item w3-button w3-wide"style="text-decoration:none">EASTER EGG</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium" onclick="w3_open()"><i class="fa fa-bars">  MENU</i></a>
+      <a href="#overview" class="w3-bar-item w3-button"><i class="fa fa-users fa-fw"></i>  Overview</a>
+      <a href="#freeapp" class="w3-bar-item w3-button"><i class="fa fa-heart fa-fw"></i>  Free App</a>
+      <a href="#paidapp" class="w3-bar-item w3-button"><i class="fa fa-dollar fa-fw"></i>  Paid App</a>
+      <a href="#rawdata" class="w3-bar-item w3-button"><i class="fa fa-bar-chart fa-fw"></i>  Raw Data</a>
+    </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+<!--    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">-->
+<!--      <i class="fa fa-bars"></i>-->
+<!--    </a>-->
+ </div>
 </div>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-medium" style="z-index:3;width:max-content;" id="mySidebar"><br>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left" style="display:none; width: auto;" id="mySidebar">
   <div class="w3-container">
-    <h2><i class="fa fa-globe"></i><b> {{ nation }}</b></h2>
+    <h2><i class="fa fa-globe"></i><b> {{ nation }}</b></h2>
     <form name="search" action="/analysis" method="GET">
         <div class="w3-input-group w3-hover-opacity-off " style="display:inline-flex; flex-direction: row;">
             <select name="nation">
@@ -59,28 +70,25 @@
   </div>
   <hr>
   <div class="w3-bar-block" >
-    <a href="#" class="w3-bar-item w3-button w3-hide-large w3-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close</a>
-    <a href="/" class="w3-bar-item w3-button"><i class="fa fa-mail-reply fa-fw"></i>  HOME</a>
-    <a href="/info" class="w3-bar-item w3-button"><i class="fa fa-smile-o fa-fw"></i>  INFO</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-large w3-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close</a>
+    <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home fa-fw"></i>  HOME</a>
+    <a href="/info" class="w3-bar-item w3-button"><i class="fa fa-smile-o fa-fw"></i>  INFO</a>
     <hr>
-    <a href="#overview" class="w3-bar-item w3-button"><i class="fa fa-users fa-fw"></i>  Overview</a>
-    <a href="#freeapp" class="w3-bar-item w3-button"><i class="fa fa-heart fa-fw"></i>  Free App</a>
-    <a href="#paidapp" class="w3-bar-item w3-button"><i class="fa fa-dollar fa-fw"></i>  Paid App</a>
-    <a href="#rawdata" class="w3-bar-item w3-button"><i class="fa fa-bar-chart fa-fw"></i>  Raw Data</a>
+    <a href="#overview" class="w3-bar-item w3-button"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="#freeapp" class="w3-bar-item w3-button"><i class="fa fa-heart fa-fw"></i>  Free App</a>
+    <a href="#paidapp" class="w3-bar-item w3-button"><i class="fa fa-dollar fa-fw"></i>  Paid App</a>
+    <a href="#rawdata" class="w3-bar-item w3-button"><i class="fa fa-bar-chart fa-fw"></i>  Raw Data</a>
   </div>
 </nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-light-grey w3-padding-64" style="margin-left:32%;margin-top:4%; ">
+<div class="w3-main w3-light-grey w3-padding-64">
 
   <!-- Overview -->
   <div class="w3-container" id="overview" >
     <header class="w3-container" style="padding-top:2%">
-      <h1><b><i class="fa fa-users"></i>  Overview</b></h1>
+      <h1><b><i class="fa fa-users"></i>  Overview</b></h1>
     </header>
     <!-- Overview part.1 -->
     <!-- Text explanation -->
@@ -136,7 +144,7 @@
   <!-- Free App -->
   <div class="w3-container" id="freeapp">
     <header class="w3-container" style="padding-top:5vw">
-      <h1><b><i class="fa fa-heart"></i>  Free App</b></h1>
+      <h1><b><i class="fa fa-heart"></i>  Free App</b></h1>
     </header>
     <!-- Free App part.1 -->
     <!-- Text explanation -->
@@ -241,7 +249,7 @@
   <!-- Paid App -->
   <div class="w3-container" id="paidapp" >
     <header class="w3-container" style="padding-top:5vw">
-      <h1><b><i class="fa fa-dollar"></i>  Paid App</b></h1>
+      <h1><b><i class="fa fa-dollar"></i>  Paid App</b></h1>
     </header>
     <!-- Paid App part.1 -->
     <!-- Text explanation -->
@@ -281,7 +289,7 @@
   <!-- Raw Data -->
   <div class="w3-container" id="rawdata" >
     <header class="w3-container" style="padding-top:5vw">
-      <h1><b><i class="fa fa-bar-chart"></i>  Raw Data</b></h1>
+      <h1><b><i class="fa fa-bar-chart"></i>  Raw Data</b></h1>
     </header>
     <!-- Raw Data part.1 -->
     <!-- Text explanation -->
