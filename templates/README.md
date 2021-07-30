@@ -16,8 +16,8 @@
  
 
 **2. info.html**  
-   - EASTER EGG가 제공하는 시각화 분석 서비스, 머신러닝, 스크래핑, 팀원에 대해 설명한 페이지 입니다.
-   - 첫 번째 container엔 EASTER EGG가 구현한 시각화 분석 서비스를 설명했습니다. `FREE APP`, `PAID APP`을 클릭하면 나오는 modal창에 관련 내용을 설명했습니다.
+   - 저희가 제공하는 시각화 분석 서비스, 머신러닝, 스크래핑, 팀원에 대해 설명한 페이지 입니다.
+   - 첫 번째 container엔 저희가 구현한 시각화 분석 서비스를 설명했습니다. `FREE APP`, `PAID APP`을 클릭하면 나오는 modal창에 관련 내용을 설명했습니다.
    
 ![info1](https://user-images.githubusercontent.com/76934803/127592739-214354b0-81e8-4c99-9c01-f947a429d5d1.png)
      
@@ -36,7 +36,7 @@
         
         
     
-   - 세 번째 container엔 팀 구성원에 대해 설명했고, `connect` 버튼을 누르면 팀원들의 깃허브 주소로 연결되도록 구성 했습니다.
+   - 세 번째 container엔 팀 구성원에 대해 설명했고, `contact` 를 클릭하면 팀원들의 GitHub로 연결되도록 구성했습니다.
    - 네 번째 container엔 연락처를 남겼습니다.
    
    ![info4](https://user-images.githubusercontent.com/76934803/127592839-564f5452-686a-4cb3-80f3-4aeb29a0d4eb.png)
@@ -48,8 +48,8 @@
 **3. analysis.html** 
    - 국가별 이용자들의 어플리케이션 선호도와 분포를 시각화한 결과를 보여주는 페이지 입니다.
    - home.html 에서 국가를 선택하고 `search`를 클릭했을 때 나오는 페이지입니다. 
-   - 다른 국가의 분석 결과를 알고 싶을 때  다시 home.html으로 돌아가지 않도록 오른쪽 side bar에 국가 리스트를 배치했습니다.
-   - Free App 과 Paid App, Google play와 App store로 분류하고,  분석한 결과를 그래프, 파이차트 등으로 시각화 했습니다.
+   - 다른 국가의 분석 결과를 알고 싶을 때  다시 home.html으로 돌아가지 않도록  오른쪽 side bar에 국가 리스트를 배치했습니다.
+   - Free App과 Paid App, Google play와 App store로 분류해서 분석한 결과를 그래프, 파이차트 등으로 시각화 했습니다.
    
 ![analysis](https://user-images.githubusercontent.com/76934803/127592847-aa64c152-174b-4726-bb9e-668dd03964bb.png)
 
