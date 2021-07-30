@@ -22,58 +22,57 @@
 
 * 각오 : 데이터 분석을 통해서 사람들이 잘 알지 못했던 사실을 발견하거나, 단순하게 나와있는 데이터를 해석하고 의미를 부여고자 한다.
   * cf) 이스터에그 : 영화, 책,  소프트웨어 등에 숨겨진 메시지나 기능을 뜻한다.
+  * 
 
-## :white_square_button:프로젝트 수행 방법/도구
+## :white_square_button: 프로젝트 수행 방법 및 도구
 
-데이터 수집, 환경구축(Django)
+- 데이터 수집, Django 환경 구축
 
-①스크래핑 : https://www.appannie.com/ , https://sensortower.com/
+  -스크래핑 : https://www.appannie.com/ , https://sensortower.com/
 
-②데이터셋 : https://www.kaggle.com/lava18/google-play-store-apps
-
- 
-
-① 스크래핑
-
-데이터수집과 전처리
-
-- BeautifulSoup: 정적 HTML문서 파싱     /원하는 데이터 추출. parser, select
-- Requests: HTML 소스 다운로드. get     content, status_code
-- Pandas : 데이터프레임 생성
-- Numpy
-
-데이터 분석 : 상관관계 분석
-
-- Pandas
-- SQLites
-
-시각화
-
-- Matplotlib:     그래프
-
-- Seaborn: heatmap(상관관계)
-
-② 데이터셋
-
-- pandas → 캐글 데이터 `read_csv`로 로드
-
-- info(), describe(),     value_counts() 로 연속형, 분류형 변수 구분
-
-  → 분류형은 one-hot encoding(get_dummies)
-
-- 종속변수, 독립변수 결정
-
-- seaborn → heatmap으로 변수 간 상관관계     분석
-
-- Sklearn → preprocessing으로 데이터     표준화
-
-- Sklearn →     train_test_split히여 데이터 나눔. shape으로     확인
-
-- sklearn → xgboost: predict해     예측값 도출
+  -데이터셋 : https://www.kaggle.com/lava18/google-play-store-apps
 
 
+-데이터수집과 전처리
 
-## :white_square_button:일정
+  - BeautifulSoup: 정적 HTML문서 파싱     /원하는 데이터 추출. parser, select
+  - Requests: HTML 소스 다운로드. get     content, status_code
+  - Pandas : 데이터프레임 생성
+  - Numpy
+
+-데이터 분석 : 상관관계 분석
+
+  - Pandas
+  - SQLites
+
+-시각화
+
+  - Matplotlib: 그래프
+
+  - Seaborn: heatmap(상관관계)
+
+
+-데이터셋
+
+  - pandas → 캐글 데이터 `read_csv`로 로드
+
+  - `info()`, `describe()`, `value_counts()` 로 연속형, 분류형 변수 구분
+
+    → 분류형은 one-hot encoding `get_dummies`
+
+  - 종속변수, 독립변수 결정
+
+  - seaborn → heatmap으로 변수 간 상관관계 분석
+
+  - Sklearn → `preprocessing`으로 데이터 표준화
+
+  - Sklearn → `train_test_split` 하여 데이터 나눔. `shape`으로 확인
+
+  - sklearn → xgboost: `predict` 하여 예측값 도출
+
+
+
+## :white_square_button: 일정
 
 - 프로젝트 수립과 데이터 수집
 
@@ -97,5 +96,8 @@
 - 포트폴리오 작성 
 
   - 7/24 ~ 7/30 : PPT, 보고서 작성
+  
+
+## :white_square_button: 서비스 구현
 
 [![SC2 Video](https://img.youtube.com/vi/p70Zis63m28/0.jpg)](https://www.youtube.com/watch?v=p70Zis63m28)
