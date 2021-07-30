@@ -8,7 +8,7 @@
    - `Choose Country`라 적혀있는 폼을 클릭하면 저희가 분석한 40개 국가의 이름이 리스트로 나옵니다. 
    - 왼쪽 상단에 있는 `3줄 아이콘`을 클릭하면 info.html로 넘어 갑니다. 
    - 궁금한 국가를 클릭하고 `search`를 누르면 analysis.html로 넘어 갑니다.
-![home.png](static/images/htmlexpl/home.png)
+![Uploading home.png…]()
 
  
  
