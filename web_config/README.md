@@ -1,47 +1,25 @@
-# 분석도구 개략
+# 분석 도구 개략
 
-데이터 수집, 환경구축(Django)
+1. Django 환경 구축 
+   - Pycharm
+   - Groom
+  
 
-①스크래핑 : https://www.appannie.com/ , https://sensortower.com/
-
-②데이터셋 : https://www.kaggle.com/lava18/google-play-store-apps
-
- 
-
-① 스크래핑
-
-데이터수집과 전처리
-
-- BeautifulSoup: 정적 HTML문서 파싱     /원하는 데이터 추출. parser, select
-- Requests: HTML 소스 다운로드. get     content, status_code
-- Pandas : 데이터프레임 생성
-- Numpy
-
-데이터 분석 : 상관관계 분석
-
-- Pandas
-- SQLites
-
-시각화
-
-- Matplotlib:     그래프
-
-- Seaborn: heatmap(상관관계)
-
-② 데이터셋
-
-- pandas → 캐글 데이터 `read_csv`로 로드
-
-- info(), describe(),     value_counts() 로 연속형, 분류형 변수 구분
-
-  → 분류형은 one-hot encoding(get_dummies)
-
-- 종속변수, 독립변수 결정
-
-- seaborn → heatmap으로 변수 간 상관관계     분석
-
-- Sklearn → preprocessing으로 데이터     표준화
-
-- Sklearn →     train_test_split히여 데이터 나눔. shape으로     확인
-
-- sklearn → xgboost: predict해     예측값 도출
+2. 데이터 수집과  전처리
+    - 스크래핑 : https://www.appannie.com/,  https://sensortower.com/
+      - BeautifulSoup : 정적 HTML 문서 parsing, 데이터 추출 -> `parser`, `select`
+      - Requests: HTML source 다운로드 -> `get content`, `status_code`
+      - Pandas : 데이터프레임 생성
+      - SQLite3 : 데이터베이스 관리
+      - Seaborn `heatmap` : 변수 간 상관관계 분석
+      - Matplotlib : 그래프 시각화
+  
+    - 머신러닝 : https://www.kaggle.com/lava18/google-play-store-apps
+      - Pandas : 캐글 데이터 load -> `read_csv`
+      - 연속형, 분류형 변수 구분 : `info()`, `describe()`, `value_counts()`
+      - One-hot encoding `get_dummies`: 분류형 변수 처리
+      - 종속변수, 독립변수 결정
+      - Seaborn `heatmap`: 변수 간 상관관계 분석
+      - Sklearn : 데이터 표준화 -> `preprocessing`
+      - Sklearn : 데이터 구분 -> `train_test_split`
+      - Sklearn : 예측값 도출 -> xgboost `predict`    
