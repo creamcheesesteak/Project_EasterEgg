@@ -1,10 +1,7 @@
-# 링크별 내용물 채워야함
-
-
-
 ## :white_square_button:프로젝트 명 : Easter Egg
 
 - [팀 구성원과 역할분담](https://github.com/creamcheesesteak/Project_EasterEgg/tree/master/home)
+
 - :chart_with_upwards_trend:프로젝트 개요와 목적
   - 주제 : 모바일 애플리케이션 이용현황을 분석하여 시각화 서비스 제공
   - 개요 : 애플리케이션 순위 데이터(Google play, ios)를 스크래핑하여 카테고리 별로 분류한다. 데이터 수집 결과 상위 범주로서 무료/유료 앱으로 구분할 수 있었다. 이에 본 프로젝트는 무료 앱과 유료 앱을 구분하여 데이터 시각화 작업을 진행하고자 한다. 
@@ -14,7 +11,7 @@
 
 - 시연
 
-  [![SC2 Video](https://img.youtube.com/vi/p70Zis63m28/0.jpg)](https://www.youtube.com/watch?v=p70Zis63m28)
+  [![SC2 Video](https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/main_page.PNG )](https://www.youtube.com/watch?v=p70Zis63m28)
 
 
 
