@@ -102,4 +102,4 @@ Scatter plot 그래프만으로는 가격이 평점에 큰 영향을 미치는�
 
 
 
-[<Main>](https://github.com/creamcheesesteak/Project_EasterEgg)
+[Main](https://github.com/creamcheesesteak/Project_EasterEgg)

@@ -263,7 +263,6 @@ def analysis(request):
         'labels_gpf': labels_gpf,
         'parents_gpf': parents_gpf,
         'values_sun': values_sun,
-
     }
     return render(request, 'analysis.html', context)
 
