@@ -97,3 +97,9 @@ EasterEgg는 데이터 세트(“Google Play Store Apps”  in kaggle)를 이용
 ![image-20210729095434747](https://user-images.githubusercontent.com/85269812/127596075-eb8874d0-52d8-4a5d-8642-a0ad9df61cc7.png)
 
 Scatter plot 그래프만으로는 가격이 평점에 큰 영향을 미치는것이라고 판단하기는 어려우나, 아래 Band 그래프를 통해 가격이 과도하게 높을경우 평점이 낮아지는것을 알수있었습니다.
+
+
+
+
+
+[<Main>](https://github.com/creamcheesesteak/Project_EasterEgg)
