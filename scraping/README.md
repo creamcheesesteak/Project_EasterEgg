@@ -82,7 +82,7 @@
 
 * 분석창의 코드
 
-  * 경로는 아래와 같으며, [home.views.py](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/home/views.py) 의 `def analysis`는 아래와 같습니다
+  * 경로는 아래와 같으며, [home.views.py](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/home/views.py) 의 `def analysis`의 첫부분은 아래와 같습니다
 
       ```python
       # web_config.urls
@@ -102,6 +102,10 @@
 
 * 시각화는 `plotly`를 사용했고 각 국가 검색에 따라 5개의 분석 그래프가 나타나도록 하였습니다.
 
+  * [overview chart setting](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/6-1.visual_code_overviewBarhChart_settings.ipynb)
+  * [freeview chart setting](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/6-2.visual_code_freeoverview_settings.ipynb)
+  * [paidview chart setting](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/6-3.visual_code_paiddetailview_setting.ipynb)
+  
   ```python
   # home.views.analysis
       context = {
@@ -128,14 +132,14 @@
           }
           return render(request, 'analysis.html', context)
   ```
-
+  
   ```html
   <!-- analysis.html -->
   Ex. <script src='https://cdn.plot.ly/plotly-2.3.0.min.js'></script>
   Ex. <div id='overview_stacked'style="width:90%;max-width:700px"></div>
   Ex. <script>JavaScript</script>
   ```
-
+  
   <img src="https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/8.visualizations.PNG"  width="70%" height="70%">
 
 
