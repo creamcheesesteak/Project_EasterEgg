@@ -37,6 +37,10 @@
 
 
 
+* 시연
+
+[![SC2 Video](https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/main_page.PNG )](https://www.youtube.com/watch?v=UUTB0XPpenE)
+
 * 구성 : 스크래퍼는 스크래퍼의 내용이 정의된 [auto_scraper.py](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/auto_scraper.py) 와 개인이 스크래퍼를 돌릴 수 있도록 [auto_scraper_operator](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/auto_scraper_operator.py) 런파일로 나뉘어져 있습니다.
 
   <img src="https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/4-1.scraper_operator_input.PNG"  width="60%" height="60%">
@@ -44,7 +48,7 @@
   * 개별국가의 정보를 일일이 스크래핑 할 때, 시간이 소요되기 때문에 팀원들에게 분석 범위를 지정하여 빠르게 스크래핑 할 수 있도록 런파일을 작성하였습니다.  각자 자신의 입력값과 범위를 지정하면 스크래핑이 가능합니다.
 
     <img src="https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/4-2.scraper_operator_run.PNG"  width="60%" height="60%">
-  
+
 
 
 
