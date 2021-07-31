@@ -25,7 +25,7 @@
 
   <img src="https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/3.matching_nations.PNG"  width="70%" height="70%">
 
-  * [앱애니와구글국가목매칭](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/1-2.matching_nations_googleplay.ipynb)
+  * [앱애니와구글국가목록매칭](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/1-2.matching_nations_googleplay.ipynb)
   * [앱애니와애플국가목록매칭](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/2-2.matching_nations_applestore.ipynb)
   * [국가목록](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/3.setting_intersection_of_nations.ipynb)
 
@@ -70,6 +70,8 @@
 
 * 사전에 설정한 국가리스트에대해 for문을 돌려 sqlite3 DB에 저장하였습니다. 오른쪽은 DB browser상에 제대로 저장된 사진입니다.
 
+  * [method_sqlite.py](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/method_sqlite.py)
+  
   <img src="https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/5.save_in_sqlite.PNG"  width="70%" height="70%">
 
 
