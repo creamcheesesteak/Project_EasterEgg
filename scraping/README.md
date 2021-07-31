@@ -37,9 +37,11 @@
 
 
 
-* 시연
+* 시연(앞부분 30초까지 참고)
 
-[![SC2 Video](https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/main_page.PNG )](https://www.youtube.com/watch?v=UUTB0XPpenE)
+  [![SC2 Video](https://raw.githubusercontent.com/creamcheesesteak/Project_EasterEgg/master/static/images/scaping/practice.PNG)](https://www.youtube.com/watch?v=UUTB0XPpenE)
+
+  
 
 * 구성 : 스크래퍼는 스크래퍼의 내용이 정의된 [auto_scraper.py](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/auto_scraper.py) 와 개인이 스크래퍼를 돌릴 수 있도록 [auto_scraper_operator](https://github.com/creamcheesesteak/Project_EasterEgg/blob/master/scraping/auto_scraper_operator.py) 런파일로 나뉘어져 있습니다.
 
